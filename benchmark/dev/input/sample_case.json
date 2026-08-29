@@ -1,0 +1,29 @@
+{
+  "case_id": "exam-01-dev-sequences-zh-v2",
+  "case_version": "2.3.0",
+  "mode": "strict-statement-plus",
+  "language": "zh-CN",
+  "source_file": "sample_textbook.md",
+  "gold_file": "../gold/sample_gold.json",
+  "source_sha256": "4241C0ED3D59E2111FE03D42CFFE3E1E71A1511556E1518BE0F704F67A021016",
+  "target": {
+    "start_heading": "## 第一章 数列",
+    "end_before_heading": "## 第二章 连续函数",
+    "expected_start_line": 5,
+    "expected_end_line": 70
+  },
+  "scope_policy": {
+    "tool": "../../../skill/textbook-knowledge-extractor/scripts/scope_markdown.py",
+    "index_before_full_read": true,
+    "max_preview_chars": 160,
+    "default_end_rule": "next-heading-at-same-or-higher-level"
+  },
+  "block_id_format": "K-{source_start_line:03d}",
+  "extensions": {
+    "proposition_provability": {
+      "enabled": false,
+      "contract": "../../interfaces/proposition-provability-v0.1-draft.md"
+    }
+  },
+  "submission_files": ["knowledge.md", "audit.json"]
+}

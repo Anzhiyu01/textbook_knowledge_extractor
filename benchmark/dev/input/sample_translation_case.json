@@ -1,0 +1,36 @@
+{
+  "case_id": "exam-01-dev-sequences-en-to-zh-v2",
+  "case_version": "2.3.0",
+  "mode": "strict-statement-plus",
+  "source_language": "en",
+  "output_language": "zh-CN",
+  "language": "zh-CN",
+  "source_file": "sample_translation_textbook.md",
+  "source_sha256": "3920FD649385FF319E9B606270835400ED2F13ED379BA499838EC5E5836B532F",
+  "gold_file": "../gold/sample_translation_gold.json",
+  "target": {
+    "start_heading": "## Chapter 1 Sequences",
+    "end_before_heading": "## Chapter 2 Continuous Functions",
+    "expected_start_line": 5,
+    "expected_end_line": 70
+  },
+  "scope_policy": {
+    "tool": "../../../skill/textbook-knowledge-extractor/scripts/scope_markdown.py",
+    "index_before_full_read": true,
+    "max_preview_chars": 160,
+    "default_end_rule": "next-heading-at-same-or-higher-level"
+  },
+  "bilingual_first_occurrence": {
+    "required": true,
+    "format": "中文（English）",
+    "scope": "included blocks in source order"
+  },
+  "block_id_format": "K-{source_start_line:03d}",
+  "extensions": {
+    "proposition_provability": {
+      "enabled": false,
+      "contract": "../../interfaces/proposition-provability-v0.1-draft.md"
+    }
+  },
+  "submission_files": ["knowledge.md", "audit.json"]
+}

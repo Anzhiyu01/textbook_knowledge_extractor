@@ -1,0 +1,101 @@
+{
+  "case_id": "exam-01-dev-sequences-en-to-zh-v2",
+  "source_sha256": "3920FD649385FF319E9B606270835400ED2F13ED379BA499838EC5E5836B532F",
+  "source_language": "en",
+  "output_language": "zh-CN",
+  "boundaries": {
+    "start_line": 5,
+    "end_line": 70,
+    "start_heading": "## Chapter 1 Sequences",
+    "end_before_heading": "## Chapter 2 Continuous Functions"
+  },
+  "required_blocks": [
+    {
+      "block_id": "K-009",
+      "kind": "definition",
+      "start_line": 9,
+      "end_line": 17,
+      "required_fragments": [
+        {"any_of": ["收敛数列（convergent sequence）", "收敛数列(convergent sequence)"]},
+        "对每个 $\\varepsilon>0$",
+        "存在正整数 $N$",
+        "|a_n-L|<\\varepsilon",
+        "$a_n\\to L$"
+      ]
+    },
+    {
+      "block_id": "K-019",
+      "kind": "theorem",
+      "start_line": 19,
+      "end_line": 21,
+      "required_fragments": [
+        {"any_of": ["极限唯一性（uniqueness of limits）", "极限唯一性(uniqueness of limits)"]},
+        "若实数数列 $\\{a_n\\}$ 收敛",
+        "极限唯一"
+      ]
+    },
+    {
+      "block_id": "K-027",
+      "kind": "example",
+      "start_line": 27,
+      "end_line": 29,
+      "required_fragments": [
+        {"any_of": ["倒数数列（reciprocal sequence）", "倒数数列(reciprocal sequence)"]},
+        "a_n=1/n",
+        "收敛到 $0$"
+      ]
+    },
+    {
+      "block_id": "K-031",
+      "kind": "counterexample",
+      "start_line": 31,
+      "end_line": 33,
+      "required_fragments": [
+        {"any_of": ["有界数列（bounded sequence）", "有界数列(bounded sequence)"]},
+        "a_n=(-1)^n",
+        "有界但不收敛"
+      ]
+    },
+    {
+      "block_id": "K-035",
+      "kind": "remark",
+      "start_line": 35,
+      "end_line": 37,
+      "required_fragments": [
+        {"any_of": ["有限项修改（finite modification）", "有限项修改(finite modification)"]},
+        "有限多个项",
+        "不改变其极限"
+      ]
+    },
+    {
+      "block_id": "K-039",
+      "kind": "property",
+      "start_line": 39,
+      "end_line": 45,
+      "required_fragments": [
+        {"any_of": ["极限的线性运算（linearity of limits）", "极限的线性运算(linearity of limits)"]},
+        "a_n\\to A",
+        "b_n\\to B",
+        "a_n+b_n\\to A+B",
+        "ca_n\\to cA"
+      ]
+    },
+    {
+      "block_id": "K-049",
+      "kind": "construction",
+      "start_line": 49,
+      "end_line": 55,
+      "required_fragments": [
+        {"any_of": ["上尾集合（tail set）", "上尾集合(tail set)"]},
+        "第 $N$ 个上尾集合",
+        "T_N=\\{a_n:n\\ge N\\}"
+      ]
+    }
+  ],
+  "excluded_blocks": [
+    {"kind": "explanation", "start_line": 7, "end_line": 7},
+    {"kind": "proof", "start_line": 23, "end_line": 25},
+    {"kind": "explanation", "start_line": 47, "end_line": 47},
+    {"kind": "exercise", "start_line": 57, "end_line": 69}
+  ]
+}

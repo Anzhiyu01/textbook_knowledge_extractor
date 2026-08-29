@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Textbook knowledge extraction audit v2.2",
+  "type": "object",
+  "required": ["case_id", "source_sha256", "task_understanding", "scope_preprocessing", "boundaries", "candidates", "acceptance"],
+  "properties": {
+    "audit_schema_version": {"type": "string", "enum": ["2.0", "2.1", "2.2", "2.3"]},
+    "case_id": {"type": "string"},
+    "source_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "task_understanding": {
+      "type": "object",
+      "required": ["source", "target", "output_language", "include_classes", "exclude_classes", "deliverables"],
+      "properties": {
+        "source": {"type": "string"},
+        "target": {"type": "string"},
+        "output_language": {"type": "string"},
+        "include_classes": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "exclude_classes": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "deliverables": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "bilingual_terms": {
+      "description": "Optional target/source term table used by --require-bilingual. The first occurrence is checked format-wise; semantic translation remains a human-review concern.",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {"$ref": "#/$defs/bilingual_term"}
+        },
+        {
+          "type": "object",
+          "required": ["terms"],
+          "properties": {
+            "terms": {
+              "type": "array",
+              "items": {"$ref": "#/$defs/bilingual_term"}
+            },
+            "source": {"type": "string"}
+          }
+        },
+        {
+          "type": "object",
+          "required": ["items"],
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {"$ref": "#/$defs/bilingual_term"}
+            },
+            "source": {"type": "string"}
+          }
+        },
+        {"$ref": "#/$defs/bilingual_term"},
+        {
+          "type": "object",
+          "minProperties": 1,
+          "not": {
+            "anyOf": [
+              {"required": ["terms"]},
+              {"required": ["term"]},
+              {"required": ["target_term"]},
+              {"required": ["chinese"]},
+              {"required": ["target"]}
+            ]
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {"type": "string"},
+              {"type": "object"}
+            ]
+          }
+        }
+      ]
+    },
+    "scope_preprocessing": {
+      "type": "object",
+      "required": ["tool", "index_before_full_read", "full_source_opened_before_slice", "selection_method", "slice_sha256", "slice_line_count"],
+      "properties": {
+        "tool": {"type": "string"},
+        "index_before_full_read": {"const": true},
+        "full_source_opened_before_slice": {"const": false},
+        "selection_method": {"type": "string"},
+        "slice_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+        "slice_line_count": {"type": "integer", "minimum": 1}
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "required": ["start_heading", "end_before_heading", "start_line", "end_line"],
+      "properties": {
+        "start_heading": {"type": "string"},
+        "end_before_heading": {"type": "string"},
+        "start_line": {"type": "integer", "minimum": 1},
+        "end_line": {"type": "integer", "minimum": 1},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/boundary_evidence"}},
+        "exclusion_intervals": {"type": "array", "items": {"$ref": "#/$defs/exclusion_interval"}}
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["block_id", "kind", "source_start_line", "source_end_line", "decision"],
+        "properties": {
+          "block_id": {"type": "string", "pattern": "^K-[0-9]{3,}$"},
+          "kind": {"type": "string", "enum": ["definition", "axiom", "notation", "proposition", "lemma", "theorem", "corollary", "property", "criterion", "formula", "construction", "example", "counterexample", "remark", "proof", "explanation", "exercise"]},
+          "source_start_line": {"type": "integer", "minimum": 1},
+          "source_end_line": {"type": "integer", "minimum": 1},
+          "container_type": {"type": "string", "enum": ["heading", "paragraph", "display_formula", "fenced_code", "callout", "html_table", "list", "other"]},
+          "source_position": {"$ref": "#/$defs/source_position"},
+          "decision": {"type": "string", "enum": ["include", "exclude"]},
+          "exclusion_reason": {"type": "string"},
+          "decision_note": {"type": "string"},
+          "source_label": {"type": "string"},
+          "mixed": {"type": "boolean"},
+          "retained_conclusion_anchor": {"type": "string"},
+          "excluded_intervals": {"type": "array", "items": {"$ref": "#/$defs/exclusion_interval"}},
+          "formula_token_map": {"type": "array", "items": {"type": "object", "required": ["source", "retained"], "properties": {"source": {"type": "string"}, "retained": {"type": "string"}}, "additionalProperties": false}},
+          "parent_block_id": {"type": "string", "pattern": "^K-[0-9]{3,}$"},
+          "source_subspans": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["role", "source_start_line", "source_end_line", "decision"],
+              "properties": {
+                "role": {"type": "string", "enum": ["setup", "result", "statement", "derivation", "verification", "proof", "explanation", "callout"]},
+                "source_start_line": {"type": "integer", "minimum": 1},
+                "source_end_line": {"type": "integer", "minimum": 1},
+                "start_column": {"type": "integer", "minimum": 1},
+                "end_column": {"type": "integer", "minimum": 1},
+                "column_semantics": {"type": "string", "const": "1-based, half-open Unicode code-point columns"},
+                "decision": {"type": "string", "enum": ["include", "exclude"]},
+                "note": {"type": "string"},
+                "text_anchor": {"type": "string"}
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"mixed": {"const": true}}, "required": ["mixed"]},
+            "then": {"required": ["retained_conclusion_anchor", "excluded_intervals", "formula_token_map", "source_subspans"]}
+          }
+        ]
+      }
+    },
+    "candidate_discovery": {
+      "type": "object",
+      "properties": {
+        "index_file": {"type": "string"},
+        "index_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+        "generator_version": {"type": "string"},
+        "unit": {"type": "string", "enum": ["container", "paragraph", "mixed"]},
+        "unnumbered_signal_policy": {"type": "string"},
+        "all_slice_units_accounted": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "source_artifacts": {
+      "description": "Standard ledger for source corruption, restoration, removal, or ordering anomalies. The source is never modified.",
+      "type": "object",
+      "required": ["items"],
+      "properties": {
+        "detected": {"type": "boolean"},
+        "policy": {"type": "string"},
+        "precheck_warning_types": {"type": "array", "items": {"type": "string"}},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["category", "basis"],
+            "oneOf": [
+              {"required": ["source_line", "original"]},
+              {"required": ["granularity", "pattern", "count", "basis", "occurrence_lines"], "properties": {"granularity": {"const": "pattern"}, "occurrence_lines": {"type": "array", "minItems": 1}}},
+              {"required": ["granularity", "pattern", "count", "basis", "occurrence_ranges"], "properties": {"granularity": {"const": "pattern"}, "occurrence_ranges": {"type": "array", "minItems": 1}}}
+            ],
+            "properties": {
+              "category": {"type": "string", "enum": ["symbol_restoration", "word_restoration", "arrow_restoration", "label_loss", "order_artifact", "paragraph_fragment_merge", "tex_tip_removal", "kept_as_source", "other"]},
+              "source_line": {"oneOf": [{"type": "integer", "minimum": 1}, {"type": "string", "minLength": 1}]},
+              "granularity": {"type": "string", "enum": ["item", "pattern"]},
+              "pattern": {"type": "string"},
+              "count": {"type": "integer", "minimum": 1},
+              "occurrence_lines": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+              "occurrence_ranges": {"type": "array", "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1}}},
+              "original": {"type": "string"},
+              "action": {"type": "string", "enum": ["restore", "flag_only", "remove_noncontent", "merge_fragment", "preserve", "register_conflict"]},
+              "restored": {"type": "string"},
+              "basis": {"type": "string", "minLength": 1},
+              "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]}
+            }
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "extraction_judgments": {
+      "description": "Explicit, reproducible decisions for unlabeled prose and mixed example/derivation spans.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {"type": "string"},
+          {
+            "type": "object",
+            "required": ["judgment_id", "source_start_line", "source_end_line", "classification", "decision", "basis"],
+            "properties": {
+              "judgment_id": {"type": "string", "minLength": 1},
+              "source_start_line": {"type": "integer", "minimum": 1},
+              "source_end_line": {"type": "integer", "minimum": 1},
+              "classification": {"type": "string", "enum": ["property", "remark", "example", "counterexample", "explanation", "derivation", "proof", "callout", "mixed"]},
+              "decision": {"type": "string", "enum": ["include", "exclude", "split"]},
+              "basis": {"type": "string", "minLength": 1},
+              "alternative_classifications": {"type": "array", "items": {"type": "string"}},
+              "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+              "parent_block_id": {"type": "string", "pattern": "^K-[0-9]{3,}$"}
+            }
+          }
+        ]
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "required": ["status", "rounds"],
+      "properties": {
+        "status": {"type": "string", "enum": ["pass", "revised-pass", "blocked"]},
+        "rounds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["round", "score", "hard_gates", "defects", "repairs"],
+            "properties": {
+              "round": {"type": "integer", "minimum": 1, "maximum": 3},
+              "score": {"type": "number", "minimum": 0, "maximum": 100},
+              "hard_gates": {
+                "type": "object",
+                "required": ["task_understood", "scope_verified_first", "candidate_closure", "contextual_block_recall", "no_contamination", "mathematics_intact", "artifacts_verified"],
+                "properties": {
+                  "task_understood": {"type": "boolean"},
+                  "scope_verified_first": {"type": "boolean"},
+                  "candidate_closure": {"type": "boolean"},
+                  "contextual_block_recall": {"type": "boolean"},
+                  "no_contamination": {"type": "boolean"},
+                  "mathematics_intact": {"type": "boolean"},
+                  "artifacts_verified": {"type": "boolean"}
+                },
+                "additionalProperties": false
+              },
+              "defects": {"type": "array", "items": {"oneOf": [{"type": "string"}, {"$ref": "#/$defs/acceptance_defect"}]}},
+              "repairs": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "source_position": {
+      "type": "object",
+      "required": ["container_type", "marker_start_line", "marker_end_line", "content_start_line", "content_end_line"],
+      "properties": {
+        "container_type": {"type": "string", "enum": ["heading", "paragraph", "display_formula", "fenced_code", "callout", "html_table", "list", "other"]},
+        "marker_start_line": {"type": "integer", "minimum": 1},
+        "marker_end_line": {"type": "integer", "minimum": 1},
+        "content_start_line": {"type": "integer", "minimum": 1},
+        "content_end_line": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "boundary_evidence": {
+      "type": "object",
+      "required": ["kind", "line", "text", "reliability", "relation"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1},
+        "line": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1, "maxLength": 240},
+        "reliability": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+        "relation": {"type": "string", "enum": ["scope_start", "scope_end", "excluded_before_start", "excluded_after_end", "transition", "supporting"]}
+      },
+      "additionalProperties": false
+    },
+    "exclusion_interval": {
+      "type": "object",
+      "required": ["start_line", "end_line", "reason"],
+      "properties": {
+        "start_line": {"type": "integer", "minimum": 1},
+        "end_line": {"type": "integer", "minimum": 1},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "acceptance_defect": {
+      "type": "object",
+      "required": ["defect", "dimension", "cap", "evidence"],
+      "properties": {
+        "defect": {"type": "string", "minLength": 1},
+        "dimension": {"type": "string", "enum": ["workflow", "scope", "coverage", "fidelity", "mathematics", "exclusion", "structure", "audit"]},
+        "cap": {"type": "number", "minimum": 0, "maximum": 100},
+        "evidence": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "bilingual_term": {
+      "type": "object",
+      "properties": {
+        "term": {"type": "string", "minLength": 1},
+        "target_term": {"type": "string", "minLength": 1},
+        "chinese": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "english": {"type": "string"},
+        "source_term": {"type": "string"},
+        "source": {"type": "string"},
+        "translation": {"type": "string"},
+        "source_text": {"type": "string"},
+        "first_occurrence_line": {"type": "integer", "minimum": 1},
+        "first_line": {"type": "integer", "minimum": 1},
+        "knowledge_line": {"type": "integer", "minimum": 1},
+        "line": {"type": "integer", "minimum": 1},
+        "block_id": {"type": "string", "pattern": "^K-[0-9]{3,}$"},
+        "candidate_id": {"type": "string", "pattern": "^K-[0-9]{3,}$"},
+        "format": {"type": "string"}
+      },
+      "anyOf": [
+        {"required": ["term"]},
+        {"required": ["target_term"]},
+        {"required": ["chinese"]},
+        {"required": ["target"]}
+      ]
+    }
+  }
+}

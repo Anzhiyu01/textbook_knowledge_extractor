@@ -1,0 +1,68 @@
+{
+  "case_id": "exam-01-dev-sequences-en-to-zh-v2",
+  "source_sha256": "3920FD649385FF319E9B606270835400ED2F13ED379BA499838EC5E5836B532F",
+  "task_understanding": {
+    "source": "sample_translation_textbook.md",
+    "target": "Chapter 1 Sequences",
+    "output_language": "zh-CN",
+    "include_classes": ["definition", "theorem", "property", "construction", "example", "counterexample", "remark"],
+    "exclude_classes": ["proof", "explanation", "exercise"],
+    "deliverables": ["knowledge.md", "audit.json"]
+  },
+  "bilingual_terms": [
+    {"term": "收敛数列", "english": "convergent sequence", "block_id": "K-009"},
+    {"term": "极限唯一性", "english": "uniqueness of limits", "block_id": "K-019"},
+    {"term": "倒数数列", "english": "reciprocal sequence", "block_id": "K-027"},
+    {"term": "有界数列", "english": "bounded sequence", "block_id": "K-031"},
+    {"term": "有限项修改", "english": "finite modification", "block_id": "K-035"},
+    {"term": "极限的线性运算", "english": "linearity of limits", "block_id": "K-039"},
+    {"term": "上尾集合", "english": "tail set", "block_id": "K-049"}
+  ],
+  "scope_preprocessing": {
+    "tool": "scope_markdown.py index + extract",
+    "index_before_full_read": true,
+    "full_source_opened_before_slice": false,
+    "selection_method": "next-heading-at-same-or-higher-level",
+    "slice_sha256": "DCE8BFF7B9B1BDDCA149AE043DA39083B7BBCC98B8A5D4A98E9C7CCCF0B3C085",
+    "slice_line_count": 66
+  },
+  "boundaries": {
+    "start_heading": "## Chapter 1 Sequences",
+    "end_before_heading": "## Chapter 2 Continuous Functions",
+    "start_line": 5,
+    "end_line": 70
+  },
+  "candidates": [
+    {"block_id": "K-007", "kind": "explanation", "source_start_line": 7, "source_end_line": 7, "decision": "exclude", "exclusion_reason": "测试数据和操作指令，不是知识陈述"},
+    {"block_id": "K-009", "kind": "definition", "source_start_line": 9, "source_end_line": 17, "decision": "include"},
+    {"block_id": "K-019", "kind": "theorem", "source_start_line": 19, "source_end_line": 21, "decision": "include"},
+    {"block_id": "K-023", "kind": "proof", "source_start_line": 23, "source_end_line": 25, "decision": "exclude", "exclusion_reason": "proof"},
+    {"block_id": "K-027", "kind": "example", "source_start_line": 27, "source_end_line": 29, "decision": "include"},
+    {"block_id": "K-031", "kind": "counterexample", "source_start_line": 31, "source_end_line": 33, "decision": "include"},
+    {"block_id": "K-035", "kind": "remark", "source_start_line": 35, "source_end_line": 37, "decision": "include"},
+    {"block_id": "K-039", "kind": "property", "source_start_line": 39, "source_end_line": 45, "decision": "include"},
+    {"block_id": "K-047", "kind": "explanation", "source_start_line": 47, "source_end_line": 47, "decision": "exclude", "exclusion_reason": "pedagogical explanation"},
+    {"block_id": "K-049", "kind": "construction", "source_start_line": 49, "source_end_line": 55, "decision": "include"},
+    {"block_id": "K-057", "kind": "exercise", "source_start_line": 57, "source_end_line": 69, "decision": "exclude", "exclusion_reason": "exercises are outside the knowledge list"}
+  ],
+  "acceptance": {
+    "status": "pass",
+    "rounds": [
+      {
+        "round": 1,
+        "score": 100,
+        "hard_gates": {
+          "task_understood": true,
+          "scope_verified_first": true,
+          "candidate_closure": true,
+          "contextual_block_recall": true,
+          "no_contamination": true,
+          "mathematics_intact": true,
+          "artifacts_verified": true
+        },
+        "defects": [],
+        "repairs": []
+      }
+    ]
+  }
+}
