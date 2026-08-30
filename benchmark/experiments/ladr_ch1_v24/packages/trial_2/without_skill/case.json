@@ -1,0 +1,21 @@
+﻿{
+    "submission_files":  [
+                             "knowledge.md",
+                             "audit.json"
+                         ],
+    "output_language":  "zh",
+    "source_file":  "Linear Algebra Done Right_clear.md",
+    "extensions":  {
+                       "proposition_provability":  {
+                                                       "enabled":  false
+                                                   }
+                   },
+    "case_id":  "ladr_ch1_v24",
+    "source_sha256":  "B46C5672E65FFC0F209185AEDA41695CF12D830872FAB3B08AAE2CBD8CF50A79",
+    "target":  {
+                   "expected_start_line":  499,
+                   "end_before_heading":  "2A",
+                   "expected_end_line":  1631,
+                   "start_heading":  "1A"
+               }
+}

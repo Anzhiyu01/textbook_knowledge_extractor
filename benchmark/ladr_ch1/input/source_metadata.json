@@ -1,0 +1,17 @@
+{
+  "title": "Linear Algebra Done Right",
+  "author": "Sheldon Axler",
+  "edition": "4th edition",
+  "source": "cleaned Markdown source, lines 499-1663",
+  "license": "CC BY-NC 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "target_lines": [
+    499,
+    1631
+  ],
+  "boundary_context_lines": [
+    1632,
+    1663
+  ],
+  "source_sha256": "B46C5672E65FFC0F209185AEDA41695CF12D830872FAB3B08AAE2CBD8CF50A79"
+}

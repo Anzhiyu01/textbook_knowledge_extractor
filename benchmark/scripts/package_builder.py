@@ -4,8 +4,8 @@ import hashlib, json, shutil
 from pathlib import Path
 
 def build_packages(experiment_dir: Path, *, case: Path, textbook: Path, skill_dir: Path, prompt: Path) -> list[Path]:
-    manifest = json.loads((experiment_dir / "manifest.json").read_text(encoding="utf-8"))
-    if json.loads((experiment_dir / "experiment.json").read_text(encoding="utf-8")) != manifest["config"]:
+    manifest = json.loads((experiment_dir / "manifest.json").read_text(encoding="utf-8-sig"))
+    if json.loads((experiment_dir / "experiment.json").read_text(encoding="utf-8-sig")) != manifest["config"]:
         raise ValueError("experiment.json changed; regenerate manifest")
     outputs=[]
     for trial in manifest["trials"]:

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Textbook Knowledge Extractor"
+  short_description: "Extract source-faithful chapter knowledge lists"
+  default_prompt: "Understand the request, index and slice the exact Markdown range, extract every required knowledge block without explanation or proof, self-accept against the source, then revise or submit."

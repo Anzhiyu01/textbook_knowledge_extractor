@@ -1,4 +1,6 @@
-# Textbook Knowledge Extraction Benchmark v2.3
+# Textbook Knowledge Extraction Benchmark v2.4
+
+Benchmark execution is offline. `benchmark/scripts/package_builder.py` creates paired user-submitted packages; `import_results.py` records returned results and refuses manifest/config drift. Results with `reasoning_effort=unknown` or gold marked `human_review_required` are retained but excluded from headline summaries.
 
 本目录包含一个可复用 skill 原型和一套可扩展 benchmark，用于检验模型能否从指定 Markdown 教材范围中忠实抽取知识点，而不是总结、解释或证明。
 

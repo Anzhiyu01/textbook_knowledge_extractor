@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from output_naming import slugify, package_name, next_available
 from check_math_rendering import check_markdown
 from experiments import validate_config
+from import_results import import_result
 
 class V24Tests(unittest.TestCase):
     def test_naming_and_collision(self):
