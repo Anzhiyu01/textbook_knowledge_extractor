@@ -1,10 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Textbook knowledge extraction audit v2.2",
+  "title": "Textbook knowledge extraction audit v2.4",
   "type": "object",
   "required": ["case_id", "source_sha256", "task_understanding", "scope_preprocessing", "boundaries", "candidates", "acceptance"],
   "properties": {
-    "audit_schema_version": {"type": "string", "enum": ["2.0", "2.1", "2.2", "2.3"]},
+    "audit_schema_version": {"type": "string", "enum": ["2.0", "2.1", "2.2", "2.3", "2.4"]},
+    "resolved_defaults": {"type": "object", "properties": {"language": {"type": "string"}, "bilingual": {"type": "boolean"}, "output_directory": {"type": "string"}}, "additionalProperties": true},
+    "output_package": {"type": "object", "properties": {"path": {"type": "string"}, "files": {"type": "object"}, "hashes": {"type": "object"}}, "additionalProperties": true},
+    "render_validation": {"type": "object", "properties": {"math_check": {"type": "object"}, "katex": {"type": "object"}, "mathjax": {"type": "object"}}, "additionalProperties": true},
     "case_id": {"type": "string"},
     "source_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
     "task_understanding": {

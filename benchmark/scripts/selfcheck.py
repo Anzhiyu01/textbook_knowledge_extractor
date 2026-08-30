@@ -179,7 +179,7 @@ def run_checks(
     boundaries = audit.get("boundaries") if isinstance(audit.get("boundaries"), dict) else {}
     scope = audit.get("scope_preprocessing") if isinstance(audit.get("scope_preprocessing"), dict) else {}
     strict_v22 = str(audit.get("audit_schema_version", "")) == "2.2"
-    strict_v23 = str(audit.get("audit_schema_version", "")) == "2.3"
+    strict_v23 = str(audit.get("audit_schema_version", "")) in {"2.3", "2.4"}
 
     if start_line is None or end_line is None:
         _add(checks, "target_range", False, "case.target must provide integer start_line/end_line")

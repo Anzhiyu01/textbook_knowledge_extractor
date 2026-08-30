@@ -3,9 +3,11 @@ name: textbook-knowledge-extractor
 description: Extract a source-faithful knowledge list from specified chapters of local Markdown textbooks, preserving definitions, theorems, properties, formulas, examples, counterexamples, and remarks while excluding proofs and explanation. Use for textbook transcription or chapter knowledge-list tasks; do not use for summaries, teaching, proving, or solving exercises.
 ---
 
-# Textbook Knowledge Extractor (audit contract v2.3)
+# Textbook Knowledge Extractor (audit contract v2.4)
 
 Produce a traceable transcription of the requested range. This is extraction, not summarization: do not add knowledge, explanations, proofs, or improvements absent from the source.
+
+Defaults are Chinese output with first-occurrence mathematical terminology as `中文（English）`; explicit user or case settings override defaults. Inline math uses `$...$` and display math uses independent `$$` lines only. Validate the completed package with `scripts/check_math_rendering.py` and record the result in `audit.json.render_validation`.
 
 ## Mandatory workflow
 

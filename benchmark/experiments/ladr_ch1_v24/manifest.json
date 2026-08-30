@@ -1,0 +1,37 @@
+{
+  "manifest_version": "2.4",
+  "experiment_id": "ladr_ch1_v24",
+  "config": {
+    "reasoning_effort": "unknown",
+    "trials": 3,
+    "model": "exact-model-name"
+  },
+  "hashes": {
+    "case": "ebb74ee5602a7254fce4a2ffc127049eb15ab42e846c6d4acce98ce56586f42c",
+    "source": "b46c5672e65ffc0f209185aeda41695cf12d830872fab3b08aae2cbd8cf50a79",
+    "skill": "e523bfeb04a51f2bd312d0d504e3ed5a8761118480ab359a8d9814624695fc37"
+  },
+  "trials": [
+    {
+      "trial": 1,
+      "arms": [
+        "with_skill",
+        "without_skill"
+      ]
+    },
+    {
+      "trial": 2,
+      "arms": [
+        "with_skill",
+        "without_skill"
+      ]
+    },
+    {
+      "trial": 3,
+      "arms": [
+        "with_skill",
+        "without_skill"
+      ]
+    }
+  ]
+}

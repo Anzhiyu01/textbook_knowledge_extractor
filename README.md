@@ -1,4 +1,4 @@
-# Textbook Extraction Workspace v2.3
+# Textbook Extraction Workspace v2.4
 
 This repository contains two packages with a one-way dependency:
 

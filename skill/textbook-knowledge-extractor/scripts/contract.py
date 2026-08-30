@@ -1,4 +1,4 @@
-"""Shared v2.3 audit contract used by runtime checkers.
+"""Shared v2.4 audit contract used by runtime checkers.
 
 Keep identifiers and enums here so validators do not silently drift.
 """
@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import re
 
-AUDIT_SCHEMA_VERSION = "2.3"
+AUDIT_SCHEMA_VERSION = "2.4"
 BLOCK_ID_PATTERN = r"^K-[0-9]{3,}$"
 BLOCK_ID_RE = re.compile(BLOCK_ID_PATTERN)
 KNOWLEDGE_BLOCK_RE = re.compile(r"(?m)^\s*#{0,6}[ \t]*(K-[0-9]{3,})\b")

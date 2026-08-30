@@ -132,7 +132,7 @@ def main() -> int:
         for key in ("start_heading", "end_before_heading"):
             if boundaries.get(key) != target[key]:
                 fail(errors, f"boundary {key} mismatch")
-        if audit.get("audit_schema_version") == "2.3":
+        if audit.get("audit_schema_version") in {"2.3", "2.4"}:
             evidence = boundaries.get("evidence")
             if not isinstance(evidence, list) or len(evidence) < 2:
                 fail(errors, "v2.3 boundaries require at least two evidence records")
@@ -204,12 +204,12 @@ def main() -> int:
                     if "start_column" in subspan or "end_column" in subspan:
                         if not (isinstance(subspan.get("start_column"), int) and isinstance(subspan.get("end_column"), int) and subspan["start_column"] >= 1 and subspan["start_column"] < subspan["end_column"]):
                             fail(errors, f"invalid half-open source_subspan columns for {block_id}")
-            if audit.get("audit_schema_version") == "2.3" and candidate.get("mixed") is True:
+            if audit.get("audit_schema_version") in {"2.3", "2.4"} and candidate.get("mixed") is True:
                 for field in ("retained_conclusion_anchor", "excluded_intervals", "formula_token_map", "source_subspans"):
                     if field not in candidate:
                         fail(errors, f"v2.3 mixed candidate missing {field}: {block_id}")
 
-        if audit.get("audit_schema_version") == "2.3" and source_lines:
+        if audit.get("audit_schema_version") in {"2.3", "2.4"} and source_lines:
             generated = discover_candidates(source_lines, target["expected_start_line"], target["expected_end_line"])
             declared = [{k: c.get(k) for k in ("block_id", "source_start_line", "source_end_line", "container_type", "signal", "text_anchor")} for c in candidates if isinstance(c, dict)]
             expected = [{k: row.get(k) for k in ("block_id", "source_start_line", "source_end_line", "container_type", "signal", "text_anchor")} for row in generated]

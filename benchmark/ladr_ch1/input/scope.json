@@ -1,0 +1,31 @@
+{
+  "source_file": "E:\\learn\\textbook_knowledge_extractor\\benchmark\\ladr_ch1\\input\\Linear Algebra Done Right_clear.md",
+  "source_sha256": "B46C5672E65FFC0F209185AEDA41695CF12D830872FAB3B08AAE2CBD8CF50A79",
+  "source_line_count": 17590,
+  "start_heading": null,
+  "end_before_heading": null,
+  "start_line": 499,
+  "end_line": 1631,
+  "slice_file": "E:\\learn\\textbook_knowledge_extractor\\benchmark\\ladr_ch1\\input\\ch1_slice.md",
+  "slice_sha256": "3CE9B13316B2B85367C19724C05AD146E620A9CCFF555FEAA9BC7B29663E735A",
+  "slice_line_count": 1133,
+  "selection_method": "explicit-line-range",
+  "start_is_heading": false,
+  "end_is_heading": false,
+  "boundary_source_positions": {
+    "start": {
+      "container_type": "heading",
+      "marker_start_line": 499,
+      "marker_end_line": 499,
+      "content_start_line": 499,
+      "content_end_line": 499
+    },
+    "end": {
+      "container_type": "paragraph",
+      "marker_start_line": 1631,
+      "marker_end_line": 1631,
+      "content_start_line": 1631,
+      "content_end_line": 1631
+    }
+  }
+}
