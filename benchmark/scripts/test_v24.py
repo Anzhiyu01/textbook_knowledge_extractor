@@ -3,7 +3,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'skill' / 'textbook-knowledge-extractor' / 'scripts'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from output_naming import slugify, package_name, next_available
+from output_naming import slugify, package_name, next_available, create_run_package
 from check_math_rendering import check_markdown
 from experiments import validate_config
 from import_results import import_result
@@ -14,6 +14,7 @@ class V24Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); p=root/'extraction_x_chapter_1'; p.mkdir(); (p/'x').write_text('x')
             self.assertTrue(next_available(root,p.name).name.endswith('_run_2'))
+            self.assertTrue((create_run_package(root, Path('book.md'), 'chapter_1', source_slug_value='book') / 'work' / 'math_check.json').is_file())
     def test_math(self):
         self.assertFalse(check_markdown('Price $10 and $20\n'))
         self.assertTrue(check_markdown('\\mathbf R'))
