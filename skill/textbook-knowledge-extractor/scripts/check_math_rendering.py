@@ -11,6 +11,7 @@ class MathIssue:
 
 _BARE = re.compile(r"(?<![\\$])(?:\\begin\{|\\mathbf\b|\\operatorname\b)")
 _MONEY = re.compile(r"\$\d+(?:\.\d{1,2})?(?:\s|$)")
+_BARE_SUBSCRIPT = re.compile(r"(?<![$\\\w])([A-Za-z])_([A-Za-z0-9])")
 
 def check_markdown(text: str) -> list[MathIssue]:
     issues: list[MathIssue] = []
@@ -25,10 +26,12 @@ def check_markdown(text: str) -> list[MathIssue]:
         if line.strip() == "$$":
             display = not display
             continue
-        if display and "$$" in line and line.strip() != "$$":
+        if "$$" in line and line.strip() != "$$":
             issues.append(MathIssue(line_no, "display_not_independent", "display math must use independent $$ lines"))
         if _BARE.search(line):
             issues.append(MathIssue(line_no, "bare_latex", "LaTeX command outside math delimiters"))
+        if _BARE_SUBSCRIPT.search(line) and "$" not in line:
+            issues.append(MathIssue(line_no, "bare_subscript", "subscript outside math delimiters"))
         if _MONEY.search(line):
             continue
         dollars = re.sub(r"\\\$", "", line).count("$")

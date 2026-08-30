@@ -18,6 +18,8 @@ class V24Tests(unittest.TestCase):
         self.assertFalse(check_markdown('Price $10 and $20\n'))
         self.assertTrue(check_markdown('\\mathbf R'))
         self.assertFalse(check_markdown('inline $x$\n'))
+        self.assertTrue(check_markdown('$$x$$\n'))
+        self.assertTrue(check_markdown('a_b\n'))
     def test_config(self):
         self.assertFalse(validate_config({'model':'x','reasoning_effort':'not_configurable','trials':3}))
 
