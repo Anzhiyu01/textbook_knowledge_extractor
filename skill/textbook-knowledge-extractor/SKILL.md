@@ -7,7 +7,7 @@ description: Extract a source-faithful knowledge list from specified chapters of
 
 Produce a traceable transcription of the requested range. This is extraction, not summarization: do not add knowledge, explanations, proofs, or improvements absent from the source.
 
-Defaults are Chinese output with first-occurrence mathematical terminology as `中文（English）`; explicit user or case settings override defaults. Inline math uses `$...$` and display math uses independent `$$` lines only. Validate the completed package with `scripts/check_math_rendering.py` and record the result in `audit.json.render_validation`.
+Defaults are Chinese output with first-occurrence mathematical terminology as `中文（English）`; explicit user or case settings override defaults. Inline math uses `$...$` and display math uses independent `$$` lines only. Validate the completed package with `scripts/check_math_rendering.py` and `scripts/quick_validate.py`, recording the result in `audit.json.render_validation`.
 
 ## Mandatory workflow
 
