@@ -1,0 +1,46 @@
+{
+  "catalog_version": "2.5",
+  "description": "Default paired benchmark catalog. A case is runnable only when its public slice and reviewed backend gold are present.",
+  "default_case_ids": [
+    "ladr_ch1_v25",
+    "rudin_ch2_v25",
+    "probability_ch1_v25"
+  ],
+  "cases": [
+    {
+      "case_id": "ladr_ch1_v25",
+      "subject": "LADR",
+      "target": "Linear Algebra Done Right, Chapter 1",
+      "source_of_truth": "scratch/ladr/Linear Algebra Done Right_clear.md",
+      "public_slice": "benchmark/ladr_ch1/input/ch1_slice.md",
+      "public_case": "benchmark/ladr_ch1/input/public_case.json",
+      "backend_gold": "benchmark/ladr_ch1/gold/candidate_gold.json",
+      "status": "blocked_until_gold_review"
+    },
+    {
+      "case_id": "rudin_ch2_v25",
+      "subject": "Rudin",
+      "target": "Principles of Mathematical Analysis, Chapter 2",
+      "source_of_truth": "scratch/Rudin.md",
+      "source_boundary": {
+        "start_line": 1309,
+        "end_line": 2206,
+        "end_before_heading": "NUMERICAL SEQUENCES AND SERIES"
+      },
+      "public_slice": null,
+      "public_case": null,
+      "backend_gold": null,
+      "status": "needs_slice_and_gold_review"
+    },
+    {
+      "case_id": "probability_ch1_v25",
+      "subject": "Probability",
+      "target": "Probability, Chapter 1",
+      "source_of_truth": "scratch/probability_ch1.md",
+      "public_slice": null,
+      "public_case": null,
+      "backend_gold": null,
+      "status": "blocked_missing_source"
+    }
+  ]
+}

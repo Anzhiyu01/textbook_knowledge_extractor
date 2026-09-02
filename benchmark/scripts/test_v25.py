@@ -256,6 +256,17 @@ class RepositoryLeakageTests(unittest.TestCase):
         for token in forbidden:
             self.assertNotIn(token.lower(), combined, token)
 
+    def test_default_catalog_is_explicit_about_unavailable_cases(self) -> None:
+        benchmark = Path(__file__).resolve().parents[1]
+        catalog = json.loads((benchmark / "default_cases.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            catalog["default_case_ids"],
+            ["ladr_ch1_v25", "rudin_ch2_v25", "probability_ch1_v25"],
+        )
+        cases = {case["case_id"]: case for case in catalog["cases"]}
+        self.assertEqual(cases["probability_ch1_v25"]["status"], "blocked_missing_source")
+        self.assertEqual(cases["ladr_ch1_v25"]["status"], "blocked_until_gold_review")
+
 
 if __name__ == "__main__":
     unittest.main()
