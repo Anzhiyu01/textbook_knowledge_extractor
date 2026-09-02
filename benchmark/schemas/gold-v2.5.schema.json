@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gold-v2.5",
+  "title": "Outcome benchmark gold v2.5",
+  "type": "object",
+  "required": ["gold_version", "case_id", "status", "items"],
+  "properties": {
+    "gold_version": {"const": "2.5"},
+    "case_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["human_review_required", "reviewed"]},
+    "review": {"type": "object"},
+    "candidate_count": {"type": "integer", "minimum": 0},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["block_id", "decision"],
+        "properties": {
+          "block_id": {"type": "string", "pattern": "^K-[0-9]{3,}$"},
+          "decision": {"type": ["string", "null"], "enum": ["include", "exclude", null]},
+          "kind": {"type": "string"},
+          "source_start_line": {"type": "integer", "minimum": 1},
+          "source_end_line": {"type": "integer", "minimum": 1},
+          "source_anchor": {"type": "string"},
+          "atomic_requirements": {"type": "array", "items": {"type": "string"}},
+          "weight": {"type": "number", "exclusiveMinimum": 0},
+          "review": {"type": "string"},
+          "review_evidence": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

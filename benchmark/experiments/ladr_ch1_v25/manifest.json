@@ -1,0 +1,46 @@
+{
+  "manifest_version": "2.5",
+  "experiment_id": "ladr_ch1_v25",
+  "config": {
+    "reasoning_effort": "unknown",
+    "trials": 3,
+    "model": "exact-model-name"
+  },
+  "hashes": {
+    "public": {
+      "prompt": "b5397bae492152e99897b887eb0bbd59988627f1901129830e55c80388a20034",
+      "case": "f62ad6808e7b88a366a3bf541eea64e39233bb2da8dbb4383a6a8270fb043072",
+      "source": "3ce9b13316b2b85367c19724c05ad146e620a9ccff555feaa9bc7b29663e735a",
+      "schema": "3f7e59fc57ef7b986afda3f3629df18578d2da476fe23f5f23e3791242a64b57",
+      "scoring": "38dfd25104dc69bcf54b4dc5a793768b7fb33fa6f0309407bae0f76a5663709b"
+    },
+    "backend": {
+      "case": "3422f3dce6b3e5e20b3bb27ab3035e051c85de0c37a975794915da9c365d8ef4",
+      "gold": "53d7c3ea60735f1d1eae0179b680635986dd533ba76e1c88092e473bf628ce74",
+      "skill": "c3b29485b0cd4297d1e6303f9cfcb3cc37853ab4b2befe0e96509c9bcb0bb2f5"
+    }
+  },
+  "trials": [
+    {
+      "trial": 1,
+      "package_ids": [
+        "package_a",
+        "package_b"
+      ]
+    },
+    {
+      "trial": 2,
+      "package_ids": [
+        "package_a",
+        "package_b"
+      ]
+    },
+    {
+      "trial": 3,
+      "package_ids": [
+        "package_a",
+        "package_b"
+      ]
+    }
+  ]
+}

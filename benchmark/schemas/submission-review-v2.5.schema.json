@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "submission-review-v2.5",
+  "title": "Human submission review v2.5",
+  "type": "object",
+  "required": ["review_version", "status", "items", "exclusion_fraction", "structure_fraction"],
+  "properties": {
+    "review_version": {"const": "2.5"},
+    "status": {"enum": ["human_review_required", "reviewed"]},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gold_id", "coverage", "fidelity_math"],
+        "properties": {
+          "gold_id": {"type": "string", "minLength": 1},
+          "coverage": {"enum": [0, 0.25, 0.5, 0.75, 1]},
+          "fidelity_math": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "exclusion_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+    "structure_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+    "unsupported_extra_count": {"type": "integer", "minimum": 0},
+    "mathematical_error_count": {"type": "integer", "minimum": 0},
+    "proof_leak_count": {"type": "integer", "minimum": 0},
+    "exercise_leak_count": {"type": "integer", "minimum": 0},
+    "human_review_items": {"type": "array"}
+  },
+  "additionalProperties": false
+}

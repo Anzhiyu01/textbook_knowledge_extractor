@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "public-audit-v2.5",
+  "title": "Public textbook extraction audit v2.5",
+  "type": "object",
+  "required": ["public_audit_version", "case_id", "entries"],
+  "properties": {
+    "public_audit_version": {"const": "2.5"},
+    "case_id": {"type": "string", "minLength": 1},
+    "entries": {"type": "array", "items": {"$ref": "#/$defs/entry"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": ["output_id", "kind", "source"],
+      "properties": {
+        "output_id": {"type": "string", "pattern": "^B-[0-9]{3,}$"},
+        "kind": {
+          "type": "string",
+          "enum": [
+            "definition", "axiom", "convention", "notation", "proposition",
+            "lemma", "theorem", "corollary", "property", "criterion",
+            "identity", "formula", "construction", "example",
+            "counterexample", "remark", "other"
+          ]
+        },
+        "source": {"$ref": "#/$defs/source"}
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "relative_start_line": {"type": "integer", "minimum": 1},
+        "relative_end_line": {"type": "integer", "minimum": 1},
+        "text_anchor": {"type": "string", "minLength": 1, "maxLength": 240},
+        "uncertain": {"type": "boolean", "default": false},
+        "uncertainty_note": {"type": "string", "minLength": 1}
+      },
+      "anyOf": [
+        {"required": ["relative_start_line", "relative_end_line"]},
+        {"required": ["text_anchor"]},
+        {
+          "required": ["uncertain", "uncertainty_note"],
+          "properties": {"uncertain": {"const": true}}
+        }
+      ],
+      "allOf": [
+        {
+          "if": {"properties": {"uncertain": {"const": true}}, "required": ["uncertain"]},
+          "then": {"required": ["uncertainty_note"]}
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

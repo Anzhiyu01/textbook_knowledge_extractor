@@ -1,0 +1,25 @@
+{
+  "control_version": "2.5",
+  "experiment_id": "ladr_ch1_v25",
+  "public_hashes": {
+    "prompt": "b5397bae492152e99897b887eb0bbd59988627f1901129830e55c80388a20034",
+    "case": "f62ad6808e7b88a366a3bf541eea64e39233bb2da8dbb4383a6a8270fb043072",
+    "source": "3ce9b13316b2b85367c19724c05ad146e620a9ccff555feaa9bc7b29663e735a",
+    "schema": "3f7e59fc57ef7b986afda3f3629df18578d2da476fe23f5f23e3791242a64b57",
+    "scoring": "38dfd25104dc69bcf54b4dc5a793768b7fb33fa6f0309407bae0f76a5663709b"
+  },
+  "trials": {
+    "1": {
+      "package_a": "with_skill",
+      "package_b": "without_skill"
+    },
+    "2": {
+      "package_a": "without_skill",
+      "package_b": "with_skill"
+    },
+    "3": {
+      "package_a": "with_skill",
+      "package_b": "without_skill"
+    }
+  }
+}

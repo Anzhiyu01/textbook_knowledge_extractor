@@ -1,5 +1,13 @@
 {
+  "gold_version": "2.5",
+  "case_id": "ladr_ch1_v25",
   "status": "human_review_required",
+  "review": {
+    "required": true,
+    "completed": false,
+    "minimum_reviewers": 2,
+    "note": "Each item still requires include/exclude, kind, atomic requirements, weight, and reviewer evidence."
+  },
   "candidate_count": 447,
   "items": [
     {
