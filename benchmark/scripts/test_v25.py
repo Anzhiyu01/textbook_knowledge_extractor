@@ -11,6 +11,7 @@ from import_results import import_result
 from package_builder import build_packages
 from score_outcome import score_submission
 from validate_public_submission import validate_public_submission
+from preflight_default_benchmark import preflight
 
 
 class PublicContractTests(unittest.TestCase):
@@ -264,8 +265,19 @@ class RepositoryLeakageTests(unittest.TestCase):
             ["ladr_ch1_v25", "rudin_ch2_v25", "probability_ch1_v25"],
         )
         cases = {case["case_id"]: case for case in catalog["cases"]}
-        self.assertEqual(cases["probability_ch1_v25"]["status"], "blocked_missing_source")
+        self.assertEqual(cases["probability_ch1_v25"]["status"], "needs_gold_review")
+        self.assertEqual(cases["rudin_ch2_v25"]["status"], "needs_gold_review")
         self.assertEqual(cases["ladr_ch1_v25"]["status"], "blocked_until_gold_review")
+
+    def test_default_preflight_requires_all_three_cases(self) -> None:
+        benchmark = Path(__file__).resolve().parents[1]
+        report = preflight(benchmark / "default_cases.json", benchmark.parent)
+        self.assertEqual(report["case_count"], 3)
+        self.assertEqual(report["status"], "BLOCKED")
+        self.assertEqual(
+            {case["case_id"] for case in report["cases"]},
+            {"ladr_ch1_v25", "rudin_ch2_v25", "probability_ch1_v25"},
+        )
 
 
 if __name__ == "__main__":

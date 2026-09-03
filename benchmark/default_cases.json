@@ -15,6 +15,7 @@
       "public_slice": "benchmark/ladr_ch1/input/ch1_slice.md",
       "public_case": "benchmark/ladr_ch1/input/public_case.json",
       "backend_gold": "benchmark/ladr_ch1/gold/candidate_gold.json",
+      "backend_case": "benchmark/ladr_ch1/control/case_v25.json",
       "status": "blocked_until_gold_review"
     },
     {
@@ -23,24 +24,29 @@
       "target": "Principles of Mathematical Analysis, Chapter 2",
       "source_of_truth": "scratch/Rudin.md",
       "source_boundary": {
-        "start_line": 1309,
-        "end_line": 2206,
+        "start_heading": "FINITE, COUNTABLE, AND UNCOUNTABLE SETS",
         "end_before_heading": "NUMERICAL SEQUENCES AND SERIES"
       },
-      "public_slice": null,
-      "public_case": null,
-      "backend_gold": null,
-      "status": "needs_slice_and_gold_review"
+      "public_slice": "benchmark/rudin_ch2/input/rudin_ch2_slice.md",
+      "public_case": "benchmark/rudin_ch2/input/public_case.json",
+      "backend_gold": "benchmark/rudin_ch2/gold/candidate_gold.json",
+      "backend_case": "benchmark/rudin_ch2/control/case_v25.json",
+      "status": "needs_gold_review"
     },
     {
       "case_id": "probability_ch1_v25",
       "subject": "Probability",
       "target": "Probability, Chapter 1",
-      "source_of_truth": "scratch/probability_ch1.md",
-      "public_slice": null,
-      "public_case": null,
-      "backend_gold": null,
-      "status": "blocked_missing_source"
+      "source_of_truth": "scratch/probability_theory.md",
+      "public_slice": "benchmark/probability_ch1/input/probability_ch1_slice.md",
+      "public_case": "benchmark/probability_ch1/input/public_case.json",
+      "backend_gold": "benchmark/probability_ch1/gold/candidate_gold.json",
+      "backend_case": "benchmark/probability_ch1/control/case_v25.json",
+      "source_boundary": {
+        "start_heading": "第一章 事件与概率",
+        "end_before_heading": "第二章 条件概率与统计独立性"
+      },
+      "status": "needs_gold_review"
     }
   ]
 }

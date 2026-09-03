@@ -1,0 +1,15 @@
+{
+  "case_version": "2.5.0",
+  "case_id": "probability_ch1_v25",
+  "source_file": "scratch/probability_theory.md",
+  "target": {
+    "start_heading": "## 第一章 事件与概率",
+    "end_before_heading": "## 第二章 条件概率与统计独立性",
+    "resolved_start_line": 57,
+    "resolved_end_line": 1886
+  },
+  "submission_files": [
+    "knowledge.md",
+    "audit.json"
+  ]
+}

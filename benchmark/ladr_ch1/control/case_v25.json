@@ -1,0 +1,12 @@
+{
+  "case_version": "2.5.0",
+  "case_id": "ladr_ch1_v25",
+  "source_file": "scratch/ladr/Linear Algebra Done Right_clear.md",
+  "target": {
+    "start_heading": "1A",
+    "end_before_heading": "2A",
+    "resolved_start_line": 499,
+    "resolved_end_line": 1631
+  },
+  "submission_files": ["knowledge.md", "audit.json"]
+}

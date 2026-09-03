@@ -1,0 +1,38 @@
+{
+  "public_case_version": "2.5",
+  "case_id": "rudin_ch2_v25",
+  "source_file": "rudin_ch2_slice.md",
+  "target": "Principles of Mathematical Analysis, Chapter 2",
+  "output_language": "zh-CN",
+  "include_classes": [
+    "definition",
+    "axiom",
+    "convention",
+    "notation",
+    "proposition",
+    "lemma",
+    "theorem",
+    "corollary",
+    "property",
+    "criterion",
+    "identity",
+    "formula",
+    "construction",
+    "example",
+    "counterexample",
+    "remark"
+  ],
+  "exclude_classes": [
+    "proof",
+    "derivation",
+    "ordinary explanation",
+    "exercise",
+    "out-of-slice content",
+    "unsupported addition"
+  ],
+  "submission_files": [
+    "knowledge.md",
+    "audit.json"
+  ],
+  "audit_schema_file": "public_audit.schema.json"
+}

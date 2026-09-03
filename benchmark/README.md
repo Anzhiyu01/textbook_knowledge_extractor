@@ -47,6 +47,15 @@ python -X utf8 scripts/score_sample.py --case dev/input/sample_case.json --submi
 
 `default_cases.json` 是默认题目目录，当前声明的顺序是：LADR 第一章、Rudin 第二章、概率论第一章。目录会明确报告缺少题源、切片或 gold 的题目；任何未达到 `ready` 的题目都不能冻结 manifest、生成 headline score 或计算 skill 净增值。
 
+从 `scratch` 重新生成 Rudin 第二章和概率论第一章的公开切片及候选 gold：
+
+```powershell
+python -X utf8 scripts/prepare_default_cases.py
+python -X utf8 scripts/check_default_cases.py
+```
+
+该脚本只生成公开切片和 `human_review_required` 候选 gold；候选边界、纳入/排除、原子要求、权重和来源证据仍需两名复核者确认。
+
 题源可以来自 `scratch`，但 `scratch` 永远不是模型工作区。构建时只把已经冻结的公开切片复制到匿名 package；gold、完整题源、case manifest、arm 映射和控制字段留在实验目录的 `control/` 或评测者目录。模型运行时必须以单个 package 目录作为唯一工作区，不能以仓库根目录启动，也不能把仓库根目录挂载给 harness。若 harness 或插件允许模型读取 package 的父目录、网络或任意本地路径，该 trial 必须标记为 `invalid`，不能靠 prompt 约束代替文件系统隔离。
 
 因此，防止被测模型提前阅读答案需要同时满足三层条件：

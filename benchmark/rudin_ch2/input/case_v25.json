@@ -1,0 +1,15 @@
+{
+  "case_version": "2.5.0",
+  "case_id": "rudin_ch2_v25",
+  "source_file": "scratch/Rudin.md",
+  "target": {
+    "start_heading": "## FINITE, COUNTABLE, AND UNCOUNTABLE SETS",
+    "end_before_heading": "# NUMERICAL SEQUENCES AND SERIES",
+    "resolved_start_line": 132,
+    "resolved_end_line": 1029
+  },
+  "submission_files": [
+    "knowledge.md",
+    "audit.json"
+  ]
+}
