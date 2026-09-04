@@ -6,2244 +6,978 @@
     "required": true,
     "completed": false,
     "minimum_reviewers": 2,
-    "note": "Each item still requires include/exclude, kind, atomic requirements, weight, and reviewer evidence."
+    "accepted_reference": true,
+    "accepted_by": "benchmark owner",
+    "independent_reviewers_completed": 0,
+    "note": "The owner accepted this deliverable as useful. Independent source mapping and atomic review remain required before headline scoring."
   },
-  "candidate_count": 447,
+  "reference": {
+    "file": "reference_knowledge.md",
+    "source_file": "scratch/ladr_ch1_list.md",
+    "sha256": "67842590bd68f9ccb6b3a462ea540c77bbc5d432cbe74567dcc065bbae279f59",
+    "adaptation": "bold_k"
+  },
+  "candidate_count": 60,
   "items": [
     {
-      "block_id": "K-499",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-501",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-503",
-      "decision": null,
-      "review": "required"
-    },
-    {
       "block_id": "K-505",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-507",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-510",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-514",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-516",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-520",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.1：复数（complex number）、复数集 $\\mathbb{C}$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:11-26"
+      ],
+      "reference_start_line": 11,
+      "reference_end_line": 26,
+      "reference_text": "定义 1.1：复数（complex number）、复数集 $\\mathbb{C}$\n\n一个复数是一个有序对 $(a,b)$，其中 $a,b\\in\\mathbb{R}$，但把它写成 $a+bi$。复数全体记为 $\\mathbb{C}$：\n\n$$\n\\mathbb{C}=\\{a+bi: a,b\\in\\mathbb{R}\\}.\n$$\n\n$\\mathbb{C}$ 上的加法与乘法定义为\n\n$$\n(a+bi)+(c+di)=(a+c)+(b+d)i,\\qquad (a+bi)(c+di)=(ac-bd)+(ad+bc)i\n$$\n\n这里 $a,b,c,d\\in\\mathbb{R}$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-522",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-524",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-526",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-528",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-530",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-534",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：$\\mathbb{R}$ 视为 $\\mathbb{C}$ 的子集",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:27-30"
+      ],
+      "reference_start_line": 27,
+      "reference_end_line": 30,
+      "reference_text": "注：$\\mathbb{R}$ 视为 $\\mathbb{C}$ 的子集\n\n若 $a\\in\\mathbb{R}$，将 $a+0i$ 与实数 $a$ 认同。于是把 $\\mathbb{R}$ 看作 $\\mathbb{C}$ 的子集。通常把 $0+bi$ 写成 $bi$，把 $0+1i$ 写成 $i$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-536",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-538",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-540",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-544",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.2：复数算术",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:31-38"
+      ],
+      "reference_start_line": 31,
+      "reference_end_line": 38,
+      "reference_text": "例 1.2：复数算术\n\n乘积 $(2+3i)(4+5i)$ 可用 1.3 中的分配律与交换律求得：\n\n$$\n(2+3i)(4+5i)=-7+22i\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-546",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-548",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-550",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-554",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-556",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-560",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-562",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-566",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-568",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-570",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-572",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-574",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-576",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-580",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-582",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-584",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-586",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-590",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-592",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-596",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-598",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-602",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-604",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "property",
+      "source_anchor": "性质 1.3：复数算术的性质",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:39-47"
+      ],
+      "reference_start_line": 39,
+      "reference_end_line": 47,
+      "reference_text": "性质 1.3：复数算术的性质\n\n- 交换律（commutativity）：$\\alpha+\\beta=\\beta+\\alpha$ 且 $\\alpha\\beta=\\beta\\alpha$，对所有 $\\alpha,\\beta\\in\\mathbb{C}$；\n- 结合律（associativity）：$(\\alpha+\\beta)+\\lambda=\\alpha+(\\beta+\\lambda)$ 且 $(\\alpha\\beta)\\lambda=\\alpha(\\beta\\lambda)$，对所有 $\\alpha,\\beta,\\lambda\\in\\mathbb{C}$；\n- 单位元（identities）：$\\lambda+0=\\lambda$ 且 $\\lambda1=\\lambda$，对所有 $\\lambda\\in\\mathbb{C}$；\n- 加法逆元（additive inverse）：对每个 $\\alpha\\in\\mathbb{C}$，存在唯一的 $\\beta\\in\\mathbb{C}$ 使得 $\\alpha+\\beta=0$；\n- 乘法逆元（multiplicative inverse）：对每个 $\\alpha\\in\\mathbb{C}$ 且 $\\alpha\\neq0$，存在唯一的 $\\beta\\in\\mathbb{C}$ 使得 $\\alpha\\beta=1$；\n- 分配律（distributive property）：$\\lambda(\\alpha+\\beta)=\\lambda\\alpha+\\lambda\\beta$，对所有 $\\lambda,\\alpha,\\beta\\in\\mathbb{C}$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-606",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-608",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-610",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-612",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-616",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-618",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-622",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-624",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-628",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-630",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-634",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.5：$-\\alpha$、减法、$1/\\alpha$、除法",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:48-73"
+      ],
+      "reference_start_line": 48,
+      "reference_end_line": 73,
+      "reference_text": "定义 1.5：$-\\alpha$、减法、$1/\\alpha$、除法\n\n设 $\\alpha,\\beta\\in\\mathbb{C}$。令 $-\\alpha$ 表示 $\\alpha$ 的加法逆元，即 $-\\alpha$ 是唯一的复数使得\n\n$$\n\\alpha+(-\\alpha)=0.\n$$\n\n$\\mathbb{C}$ 上的减法定义为\n\n$$\n\\beta-\\alpha=\\beta+(-\\alpha).\n$$\n\n对 $\\alpha\\neq0$，令 $1/\\alpha$ 和 $\\frac{1}{\\alpha}$ 表示 $\\alpha$ 的乘法逆元，即 $1/\\alpha$ 是唯一的复数使得\n\n$$\n\\alpha(1/\\alpha)=1.\n$$\n\n对 $\\alpha\\neq0$，除以 $\\alpha$ 定义为\n\n$$\n\\beta/\\alpha=\\beta(1/\\alpha).\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-636",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-638",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-640",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-642",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "notation",
+      "source_anchor": "记号 1.6：$\\mathbb{F}$ 表示 $\\mathbb{R}$ 或 $\\mathbb{C}$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:74-77"
+      ],
+      "reference_start_line": 74,
+      "reference_end_line": 77,
+      "reference_text": "记号 1.6：$\\mathbb{F}$ 表示 $\\mathbb{R}$ 或 $\\mathbb{C}$\n\n整本书中，$\\mathbb{F}$ 表示 $\\mathbb{R}$（实数）或 $\\mathbb{C}$（复数）两者之一。若证明一个关于 $\\mathbb{F}$ 的定理，就知道把 $\\mathbb{F}$ 换成 $\\mathbb{R}$ 时成立，换成 $\\mathbb{C}$ 时也成立。字母 $\\mathbb{F}$ 的选用是因为 $\\mathbb{R}$ 和 $\\mathbb{C}$ 是所谓域（field）的例子。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-644",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义：标量（scalar）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:78-81"
+      ],
+      "reference_start_line": 78,
+      "reference_end_line": 81,
+      "reference_text": "定义：标量（scalar）\n\n$\\mathbb{F}$ 的元素称为标量（scalar）。「标量」即「数」的别称，常用来强调对象是一个数而非向量。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-646",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-648",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-652",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-654",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-658",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-660",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-662",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义：$\\alpha^{m}$ 及其性质",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:82-99"
+      ],
+      "reference_start_line": 82,
+      "reference_end_line": 99,
+      "reference_text": "定义：$\\alpha^{m}$ 及其性质\n\n对 $\\alpha\\in\\mathbb{F}$ 和正整数 $m$，定义 $\\alpha^{m}$ 为 $\\alpha$ 自乘 $m$ 次：\n\n$$\n\\alpha^{m}=\\underbrace{\\alpha\\cdots\\alpha}_{m\\ \\text{times}}.\n$$\n\n这个定义蕴含\n\n$$\n(\\alpha^{m})^{n}=\\alpha^{mn}\\quad\\text{且}\\quad (\\alpha\\beta)^{m}=\\alpha^{m}\\beta^{m}\n$$\n\n对所有 $\\alpha,\\beta\\in\\mathbb{F}$ 及所有正整数 $m,n$。\n\n#### Lists（列表）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-664",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-666",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-668",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-672",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-674",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-678",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.7：$\\mathbb{R}^{2}$ 与 $\\mathbb{R}^{3}$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:100-113"
+      ],
+      "reference_start_line": 100,
+      "reference_end_line": 113,
+      "reference_text": "例 1.7：$\\mathbb{R}^{2}$ 与 $\\mathbb{R}^{3}$\n\n集合 $\\mathbb{R}^{2}$（可看作平面）是全体实数有序对：\n\n$$\n\\mathbb{R}^{2}=\\{(x,y): x,y\\in\\mathbb{R}\\}.\n$$\n\n集合 $\\mathbb{R}^{3}$（可看作通常的空间）是全体实数有序三元组：\n\n$$\n\\mathbb{R}^{3}=\\{(x,y,z): x,y,z\\in\\mathbb{R}\\}.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-680",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-682",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-685",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-687",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-689",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-691",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-695",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-697",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-699",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.8：列表（list）与长度（length）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:114-123"
+      ],
+      "reference_start_line": 114,
+      "reference_end_line": 123,
+      "reference_text": "定义 1.8：列表（list）与长度（length）\n\n设 $n$ 是非负整数。长度为 $n$ 的列表是 $n$ 个元素的有序集（元素可以是数、其他列表或更抽象的对象）。两个列表相等当且仅当它们长度相同、元素相同且顺序相同。列表中元素用逗号分隔、外面加圆括号；长度 $n$ 的列表可写成\n\n$$\n(z_{1},\\dots,z_{n}).\n$$\n\n许多数学家把长度为 $n$ 的列表称为 $n$ 元组（$n$-tuple）。每个列表都有有限的、非负整数的长度；形如 $(x_{1},x_{2},\\dots)$ 的对象不是列表。长度为 0 的列表写作 `( )`，也视为列表。列表与集合有两方面区别：列表讲究顺序、重复有意义；集合中顺序与重复都无关。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-701",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-703",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-706",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-708",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.9：列表与集合的区别",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:124-129"
+      ],
+      "reference_start_line": 124,
+      "reference_end_line": 129,
+      "reference_text": "例 1.9：列表与集合的区别\n\n列表 $(3,5)$ 与 $(5,3)$ 不相等，而集合 $\\{3,5\\}$ 与 $\\{5,3\\}$ 相等。列表 $(4,4)$ 与 $(4,4,4)$ 不相等（长度不同），虽然集合 $\\{4,4\\}$ 与 $\\{4,4,4\\}$ 都等于集合 $\\{4\\}$。\n\n#### $\\mathbb{F}^{n}$（$\\mathbb{F}^{n}$）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-710",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-712",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "notation",
+      "source_anchor": "记号 1.10：$n$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:130-133"
+      ],
+      "reference_start_line": 130,
+      "reference_end_line": 133,
+      "reference_text": "记号 1.10：$n$\n\n本章剩下部分固定一个正整数 $n$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-714",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-716",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-718",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-722",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-724",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.11：$\\mathbb{F}^{n}$ 与坐标（coordinate）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:134-143"
+      ],
+      "reference_start_line": 134,
+      "reference_end_line": 143,
+      "reference_text": "定义 1.11：$\\mathbb{F}^{n}$ 与坐标（coordinate）\n\n$\\mathbb{F}^{n}$ 是长度为 $n$、元素取自 $\\mathbb{F}$ 的全体列表：\n\n$$\n\\mathbb{F}^{n}=\\{(x_{1},\\dots,x_{n}): x_{k}\\in\\mathbb{F}\\ \\text{对}\\ k=1,\\dots,n\\}.\n$$\n\n对 $(x_{1},\\dots,x_{n})\\in\\mathbb{F}^{n}$ 且 $k\\in\\{1,\\dots,n\\}$，称 $x_{k}$ 是 $(x_{1},\\dots,x_{n})$ 的第 $k$ 个坐标。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-726",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-728",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-730",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-734",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-736",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.12：$\\mathbb{C}^{4}$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:144-151"
+      ],
+      "reference_start_line": 144,
+      "reference_end_line": 151,
+      "reference_text": "例 1.12：$\\mathbb{C}^{4}$\n\n$\\mathbb{C}^{4}$ 是长度为 4、元素取自 $\\mathbb{C}$ 的全体列表：\n\n$$\n\\mathbb{C}^{4}=\\{(z_{1},z_{2},z_{3},z_{4}): z_{1},z_{2},z_{3},z_{4}\\in\\mathbb{C}\\}.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-738",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-740",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-742",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-746",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.13：$\\mathbb{F}^{n}$ 中的加法",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:152-159"
+      ],
+      "reference_start_line": 152,
+      "reference_end_line": 159,
+      "reference_text": "定义 1.13：$\\mathbb{F}^{n}$ 中的加法\n\n$\\mathbb{F}^{n}$ 中的加法通过逐坐标相加定义：\n\n$$\n(x_{1},\\dots,x_{n})+(y_{1},\\dots,y_{n})=(x_{1}+y_{1},\\dots,x_{n}+y_{n}).\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-748",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-750",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-752",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-754",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-758",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-760",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-762",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-764",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "property",
+      "source_anchor": "性质 1.14：$\\mathbb{F}^{n}$ 中加法的交换律",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:160-163"
+      ],
+      "reference_start_line": 160,
+      "reference_end_line": 163,
+      "reference_text": "性质 1.14：$\\mathbb{F}^{n}$ 中加法的交换律\n\n若 $x,y\\in\\mathbb{F}^{n}$，则 $x+y=y+x$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-766",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-768",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-770",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-774",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "notation",
+      "source_anchor": "记号 1.15：$0$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:164-173"
+      ],
+      "reference_start_line": 164,
+      "reference_end_line": 173,
+      "reference_text": "记号 1.15：$0$\n\n令 $0$ 表示坐标全为 0 的长度 $n$ 的列表：\n\n$$\n0=(0,\\dots,0).\n$$\n\n此式左边的 0 表示 $\\mathbb{F}^{n}$ 中的列表，右边的每个 0 表示数；这种混淆做法实际无害，因为上下文总指明是哪个 0。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-776",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-778",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-780",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-784",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-786",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-788",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-790",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-792",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-794",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-796",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-798",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-801",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-805",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-807",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-809",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-812",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-816",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-818",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-820",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-822",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-824",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-826",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-829",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-836",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-838",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.16：语境决定哪个 $0$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:174-183"
+      ],
+      "reference_start_line": 174,
+      "reference_end_line": 183,
+      "reference_text": "例 1.16：语境决定哪个 $0$\n\n考虑「$0$ 是 $\\mathbb{F}^{n}$ 的一个加法单位元」这一陈述：\n\n$$\nx+0=x\\quad\\text{对一切}\\ x\\in\\mathbb{F}^{n}.\n$$\n\n其中的 0 是 1.15 定义的列表，不是数 0，因为尚未定义 $\\mathbb{F}^{n}$ 的元素 $x$ 与数 0 的和。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-840",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-842",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-844",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-848",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-850",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-852",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-854",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-857",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-861",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-863",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.17：$\\mathbb{F}^{n}$ 中的加法逆元 $-x$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:184-193"
+      ],
+      "reference_start_line": 184,
+      "reference_end_line": 193,
+      "reference_text": "定义 1.17：$\\mathbb{F}^{n}$ 中的加法逆元 $-x$\n\n对 $x\\in\\mathbb{F}^{n}$，$x$ 的加法逆元记为 $-x$，是 $\\mathbb{F}^{n}$ 中使\n\n$$\nx+(-x)=0\n$$\n\n的向量。若 $x=(x_{1},\\dots,x_{n})$，则 $-x=(-x_{1},\\dots,-x_{n})$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-865",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-867",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-869",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-873",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-875",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-877",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-879",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-881",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-883",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-886",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-891",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.18：$\\mathbb{F}^{n}$ 中的数乘（scalar multiplication）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:194-205"
+      ],
+      "reference_start_line": 194,
+      "reference_end_line": 205,
+      "reference_text": "定义 1.18：$\\mathbb{F}^{n}$ 中的数乘（scalar multiplication）\n\n数 $\\lambda$ 与 $\\mathbb{F}^{n}$ 中向量的乘积通过把向量的每个坐标乘以 $\\lambda$ 来计：\n\n$$\n\\lambda(x_{1},\\dots,x_{n})=(\\lambda x_{1},\\dots,\\lambda x_{n});\n$$\n\n这里 $\\lambda\\in\\mathbb{F}$ 且 $(x_{1},\\dots,x_{n})\\in\\mathbb{F}^{n}$。\n\n#### Digression on Fields（域的补充说明）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-893",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-895",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义：域（field）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:206-209"
+      ],
+      "reference_start_line": 206,
+      "reference_end_line": 209,
+      "reference_text": "定义：域（field）\n\n域是含至少两个不同元素（记为 0 和 1）的集合，连同满足 1.3 中全部性质的加法与乘法运算。于是 $\\mathbb{R}$ 和 $\\mathbb{C}$ 都是域，有理数集按通常的加法与乘法也是域。另一个例子是 $\\{0,1\\}$，按通常加法与乘法，但规定 $1+1=0$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-897",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-899",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-901",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-909",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-913",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-915",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-918",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-922",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-924",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-928",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-934",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-936",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-938",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-940",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-942",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-944",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：对任意域的推广",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:210-215"
+      ],
+      "reference_start_line": 210,
+      "reference_end_line": 215,
+      "reference_text": "注：对任意域的推广\n\n本书只用 $\\mathbb{R}$ 和 $\\mathbb{C}$ 两域。但线性代数中许多对 $\\mathbb{R}$、$\\mathbb{C}$ 成立的定义、定理与证明可以不加修改地用于任意域。除第 6、7 章（内积空间）外，可以把 $\\mathbb{F}$ 理解为任意域；凡以「$\\mathbb{F}$ 为 $\\mathbb{C}$」为假设的结果（内积章节除外），可以把该假设替换为「$\\mathbb{F}$ 为代数闭域」（即每个非常系数数多项式都有零点）。少数结果（例如 1C 节习题 13）需要 $\\mathbb{F}$ 满足 $1+1\\neq0$。\n\n### 1B Definition of Vector Space（向量空间的定义）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-946",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-948",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-951",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.19：加法与数乘",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:216-219"
+      ],
+      "reference_start_line": 216,
+      "reference_end_line": 219,
+      "reference_text": "定义 1.19：加法与数乘\n\n集合 $V$ 上的一个加法（addition）是给每对元素 $u,v\\in V$ 指派一个元素 $u+v\\in V$ 的函数。集合 $V$ 上的一个数乘（scalar multiplication）是给每个 $\\lambda\\in\\mathbb{F}$ 和每个 $v\\in V$ 指派一个元素 $\\lambda v\\in V$ 的函数。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-953",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-955",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-957",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-959",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-963",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-965",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-969",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-971",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-973",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-975",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-977",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-979",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-983",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-985",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-989",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.20：向量空间（vector space）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:220-230"
+      ],
+      "reference_start_line": 220,
+      "reference_end_line": 230,
+      "reference_text": "定义 1.20：向量空间（vector space）\n\n向量空间是一个集合 $V$，连同 $V$ 上的一个加法与 $V$ 上的一个数乘，满足如下性质：\n\n- 交换律（commutativity）：$u+v=v+u$，对所有 $u,v\\in V$；\n- 结合律（associativity）：$(u+v)+w=u+(v+w)$ 且 $(ab)v=a(bv)$，对所有 $u,v,w\\in V$ 及所有 $a,b\\in\\mathbb{F}$；\n- 加法单位元（additive identity）：存在元素 $0\\in V$ 使得 $v+0=v$ 对所有 $v\\in V$；\n- 加法逆元（additive inverse）：对每个 $v\\in V$，存在 $w\\in V$ 使得 $v+w=0$；\n- 乘法单位元（multiplicative identity）：$1v=v$ 对所有 $v\\in V$；\n- 分配律（distributive properties）：$a(u+v)=au+av$ 且 $(a+b)v=av+bv$，对所有 $a,b\\in\\mathbb{F}$ 及所有 $u,v\\in V$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-991",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-993",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.21：向量（vector）与点（point）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:231-234"
+      ],
+      "reference_start_line": 231,
+      "reference_end_line": 234,
+      "reference_text": "定义 1.21：向量（vector）与点（point）\n\n向量空间的元素称为向量或点。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-995",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：「over $\\mathbb{F}$」的表述",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:235-238"
+      ],
+      "reference_start_line": 235,
+      "reference_end_line": 238,
+      "reference_text": "注：「over $\\mathbb{F}$」的表述\n\n数乘依赖于 $\\mathbb{F}$，因此需要精确时，说 $V$ 是 $\\mathbb{F}$ 上的向量空间（vector space over $\\mathbb{F}$）而不只是向量空间。例如 $\\mathbb{R}^{n}$ 是 $\\mathbb{R}$ 上的向量空间，$\\mathbb{C}^{n}$ 是 $\\mathbb{C}$ 上的向量空间。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-997",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-999",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1002",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.22：实向量空间、复向量空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:239-242"
+      ],
+      "reference_start_line": 239,
+      "reference_end_line": 242,
+      "reference_text": "定义 1.22：实向量空间、复向量空间\n\n$\\mathbb{R}$ 上的向量空间称为实向量空间（real vector space）；$\\mathbb{C}$ 上的向量空间称为复向量空间（complex vector space）。通常 $\\mathbb{F}$ 的选择由上下文决定或无关紧要，因而常常省略不写。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1004",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：$\\mathbb{F}^{n}$ 是向量空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:243-246"
+      ],
+      "reference_start_line": 243,
+      "reference_end_line": 246,
+      "reference_text": "注：$\\mathbb{F}^{n}$ 是向量空间\n\n按通常的加法与数乘，$\\mathbb{F}^{n}$ 是 $\\mathbb{F}$ 上的向量空间。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1006",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1008",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：最简向量空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:247-250"
+      ],
+      "reference_start_line": 247,
+      "reference_end_line": 250,
+      "reference_text": "注：最简向量空间\n\n最简单的向量空间是 $\\{0\\}$，只包含一个点。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1010",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1012",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1014",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1018",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1020",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1024",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1028",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1030",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.23：$\\mathbb{F}^{\\infty}$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:251-270"
+      ],
+      "reference_start_line": 251,
+      "reference_end_line": 270,
+      "reference_text": "例 1.23：$\\mathbb{F}^{\\infty}$\n\n$\\mathbb{F}^{\\infty}$ 定义为 $\\mathbb{F}$ 中元素的一切序列：\n\n$$\n\\mathbb{F}^{\\infty}=\\{(x_{1},x_{2},\\dots): x_{k}\\in\\mathbb{F}\\ \\text{对}\\ k=1,2,\\dots\\}.\n$$\n\n$\\mathbb{F}^{\\infty}$ 上的加法与数乘按自然方式定义：\n\n$$\n(x_{1},x_{2},\\dots)+(y_{1},y_{2},\\dots)=(x_{1}+y_{1},x_{2}+y_{2},\\dots),\n$$\n\n$$\n\\lambda(x_{1},x_{2},\\dots)=(\\lambda x_{1},\\lambda x_{2},\\dots).\n$$\n\n按这些定义，$\\mathbb{F}^{\\infty}$ 成为 $\\mathbb{F}$ 上的向量空间；其加法单位元是全为 0 的序列。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1032",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1034",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1037",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1041",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1043",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1045",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1049",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1051",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1053",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "notation",
+      "source_anchor": "记号 1.24：$\\mathbb{F}^{S}$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:271-286"
+      ],
+      "reference_start_line": 271,
+      "reference_end_line": 286,
+      "reference_text": "记号 1.24：$\\mathbb{F}^{S}$\n\n若 $S$ 是集合，则 $\\mathbb{F}^{S}$ 表示从 $S$ 到 $\\mathbb{F}$ 的函数全体。对 $f,g\\in\\mathbb{F}^{S}$，和 $f+g\\in\\mathbb{F}^{S}$ 定义为\n\n$$\n(f+g)(x)=f(x)+g(x)\\quad\\text{对所有}\\ x\\in S.\n$$\n\n对 $\\lambda\\in\\mathbb{F}$ 与 $f\\in\\mathbb{F}^{S}$，乘积 $\\lambda f\\in\\mathbb{F}^{S}$ 定义为\n\n$$\n(\\lambda f)(x)=\\lambda f(x)\\quad\\text{对所有}\\ x\\in S.\n$$\n\n例如 $S=[0,1]$ 且 $\\mathbb{F}=\\mathbb{R}$ 时，$\\mathbb{R}^{[0,1]}$ 是 $[0,1]$ 上实值函数的集合。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1055",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1057",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1060",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1064",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1066",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1068",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1072",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.25：$\\mathbb{F}^{S}$ 是向量空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:287-300"
+      ],
+      "reference_start_line": 287,
+      "reference_end_line": 300,
+      "reference_text": "例 1.25：$\\mathbb{F}^{S}$ 是向量空间\n\n若 $S$ 是非空集合，则 $\\mathbb{F}^{S}$（按上述加法与数乘）是 $\\mathbb{F}$ 上的向量空间。$\\mathbb{F}^{S}$ 的加法单位元是函数 $0:S\\to\\mathbb{F}$，定义为\n\n$$\n0(x)=0\\quad\\text{对所有}\\ x\\in S.\n$$\n\n对 $f\\in\\mathbb{F}^{S}$，$f$ 的加法逆元是函数 $-f:S\\to\\mathbb{F}$，定义为\n\n$$\n(-f)(x)=-f(x)\\quad\\text{对所有}\\ x\\in S.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1074",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1076",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1078",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1080",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1082",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "注：$\\mathbb{F}^{n}$ 是 $\\mathbb{F}^{S}$ 的特例",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:301-304"
+      ],
+      "reference_start_line": 301,
+      "reference_end_line": 304,
+      "reference_text": "注：$\\mathbb{F}^{n}$ 是 $\\mathbb{F}^{S}$ 的特例\n\n向量空间 $\\mathbb{F}^{n}$ 是向量空间 $\\mathbb{F}^{S}$ 的特例：每个 $(x_{1},\\dots,x_{n})\\in\\mathbb{F}^{n}$ 可以看作从集合 $\\{1,2,\\dots,n\\}$ 到 $\\mathbb{F}$ 的函数 $x$，只须把第 $k$ 个坐标 $x_{k}$ 写成 $x(k)$。换言之，可以把 $\\mathbb{F}^{n}$ 看作 $\\mathbb{F}^{\\{1,2,\\dots,n\\}}$；类似地可把 $\\mathbb{F}^{\\infty}$ 看作 $\\mathbb{F}^{\\{1,2,\\dots\\}}$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1084",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1086",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1088",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1090",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1094",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1096",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "other",
+      "source_anchor": "结论 1.26：加法单位元唯一",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:305-308"
+      ],
+      "reference_start_line": 305,
+      "reference_end_line": 308,
+      "reference_text": "结论 1.26：加法单位元唯一\n\n向量空间有唯一的加法单位元。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1098",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1100",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1102",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1104",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1108",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1110",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "other",
+      "source_anchor": "结论 1.27：加法逆元唯一",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:309-312"
+      ],
+      "reference_start_line": 309,
+      "reference_end_line": 312,
+      "reference_text": "结论 1.27：加法逆元唯一\n\n向量空间中每个元素有唯一的加法逆元。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1112",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1114",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1116",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1119",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "notation",
+      "source_anchor": "记号 1.28：$-v$、$w-v$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:313-316"
+      ],
+      "reference_start_line": 313,
+      "reference_end_line": 316,
+      "reference_text": "记号 1.28：$-v$、$w-v$\n\n设 $v,w\\in V$，则 $-v$ 表示 $v$ 的加法逆元；$w-v$ 定义为 $w+(-v)$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1121",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1123",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1125",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "notation",
+      "source_anchor": "记号 1.29：$V$ 表示 $\\mathbb{F}$ 上的向量空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:317-320"
+      ],
+      "reference_start_line": 317,
+      "reference_end_line": 320,
+      "reference_text": "记号 1.29：$V$ 表示 $\\mathbb{F}$ 上的向量空间\n\n全书其余部分，$V$ 表示 $\\mathbb{F}$ 上的一个向量空间。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1127",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1129",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1133",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1135",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1139",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1141",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1143",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1145",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "other",
+      "source_anchor": "结论 1.30：数 0 乘向量",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:321-328"
+      ],
+      "reference_start_line": 321,
+      "reference_end_line": 328,
+      "reference_text": "结论 1.30：数 0 乘向量\n\n$$\n0v=0\\quad\\text{对每个}\\ v\\in V.\n$$\n\n（左端的 0 是标量，右端的 0 是 $V$ 的加法单位元。）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1147",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1149",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1153",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1155",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1159",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1161",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "other",
+      "source_anchor": "结论 1.31：数乘向量 0",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:329-336"
+      ],
+      "reference_start_line": 329,
+      "reference_end_line": 336,
+      "reference_text": "结论 1.31：数乘向量 0\n\n$$\na0=0\\quad\\text{对每个}\\ a\\in\\mathbb{F}.\n$$\n\n（此处的 0 是 $V$ 的加法单位元。）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1163",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1165",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1169",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1171",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1175",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1177",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1179",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1185",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1189",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1191",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1193",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1195",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1199",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1201",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1205",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1209",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1213",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1215",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1217",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1219",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1221",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1223",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1227",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1229",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1231",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1235",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1237",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1239",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1241",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1243",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "other",
+      "source_anchor": "结论 1.32：数 $-1$ 乘向量",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:337-344"
+      ],
+      "reference_start_line": 337,
+      "reference_end_line": 344,
+      "reference_text": "结论 1.32：数 $-1$ 乘向量\n\n$$\n(-1)v=-v\\quad\\text{对每个}\\ v\\in V.\n$$\n\n### 1C Subspaces（子空间）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1245",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1247",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1249",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.33：子空间（subspace）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:345-348"
+      ],
+      "reference_start_line": 345,
+      "reference_end_line": 348,
+      "reference_text": "定义 1.33：子空间（subspace）\n\n$V$ 的子集 $U$ 称为 $V$ 的子空间，若 $U$ 与 $V$ 使用相同的加法单位元、加法与数乘时也是一个向量空间。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1251",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：术语「线性子空间」",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:349-352"
+      ],
+      "reference_start_line": 349,
+      "reference_end_line": 352,
+      "reference_text": "注：术语「线性子空间」\n\n有人使用术语「线性子空间（linear subspace）」，它与「子空间」意思相同。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1253",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1255",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1257",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1259",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1263",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1265",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1269",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1271",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1275",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1277",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "criterion",
+      "source_anchor": "判定 1.34：子空间的充要条件",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:353-360"
+      ],
+      "reference_start_line": 353,
+      "reference_end_line": 360,
+      "reference_text": "判定 1.34：子空间的充要条件\n\n$V$ 的子集 $U$ 是 $V$ 的子空间当且仅当 $U$ 满足下列三个条件：\n\n- 加法单位元（additive identity）：$0\\in U$；\n- 对加法封闭（closed under addition）：$u,w\\in U$ 蕴含 $u+w\\in U$；\n- 对数乘封闭（closed under scalar multiplication）：$a\\in\\mathbb{F}$ 且 $u\\in U$ 蕴含 $au\\in U$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1279",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1281",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1283",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1285",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：条件可替换为「非空」",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:361-364"
+      ],
+      "reference_start_line": 361,
+      "reference_end_line": 364,
+      "reference_text": "注：条件可替换为「非空」\n\n上述加法单位元条件可以替换为「$U$ 非空」（因为取 $u\\in U$ 乘以 0 就能得到 $0\\in U$）。不过若 $U$ 确是子空间，通常最快说明 $U$ 非空的办法就是证明 $0\\in U$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1287",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1289",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1291",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1295",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1297",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1302",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.35：子空间的例子",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:365-382"
+      ],
+      "reference_start_line": 365,
+      "reference_end_line": 382,
+      "reference_text": "例 1.35：子空间的例子\n\n(a) 若 $b\\in\\mathbb{F}$，则\n\n$$\n\\{(x_{1},x_{2},x_{3},x_{4})\\in\\mathbb{F}^{4}: x_{3}=5x_{4}+b\\}\n$$\n\n是 $\\mathbb{F}^{4}$ 的子空间当且仅当 $b=0$。\n\n(b) $[0,1]$ 上连续实值函数的集合是 $\\mathbb{R}^{[0,1]}$ 的子空间。\n\n(c) $\\mathbb{R}$ 上可微实值函数的集合是 $\\mathbb{R}^{\\mathbb{R}}$ 的子空间。\n\n(d) 区间 $(0,3)$ 上满足 $f'(2)=b$ 的可微实值函数 $f$ 的集合是 $\\mathbb{R}^{(0,3)}$ 的子空间当且仅当 $b=0$。\n\n(e) 极限为 0 的复数序列全体是 $\\mathbb{C}^{\\infty}$ 的子空间。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1304",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：最小与最大子空间；空集不是子空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:383-386"
+      ],
+      "reference_start_line": 383,
+      "reference_end_line": 386,
+      "reference_text": "注：最小与最大子空间；空集不是子空间\n\n$\\{0\\}$ 是 $V$ 的最小子空间，$V$ 本身是 $V$ 的最大子空间。空集不是 $V$ 的子空间，因为子空间必须是向量空间，从而必须至少含一个元素（一个加法单位元）。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1306",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1308",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1310",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：$\\mathbb{R}^{2}$、$\\mathbb{R}^{3}$ 的子空间分类",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:387-392"
+      ],
+      "reference_start_line": 387,
+      "reference_end_line": 392,
+      "reference_text": "注：$\\mathbb{R}^{2}$、$\\mathbb{R}^{3}$ 的子空间分类\n\n$\\mathbb{R}^{2}$ 的子空间恰好是 $\\{0\\}$、$\\mathbb{R}^{2}$ 中过原点的所有直线，以及 $\\mathbb{R}^{2}$。$\\mathbb{R}^{3}$ 的子空间恰好是 $\\{0\\}$、$\\mathbb{R}^{3}$ 中过原点的所有直线、$\\mathbb{R}^{3}$ 中过原点的所有平面，以及 $\\mathbb{R}^{3}$。\n\n#### Sums of Subspaces（子空间的和）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1312",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：子空间的并很少是子空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:393-396"
+      ],
+      "reference_start_line": 393,
+      "reference_end_line": 396,
+      "reference_text": "注：子空间的并很少是子空间\n\n子空间的并很少是子空间（见习题 12），这正是通常用和而非并的原因。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1314",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1316",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1318",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1322",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.36：子空间的和（sum of subspaces）",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:397-404"
+      ],
+      "reference_start_line": 397,
+      "reference_end_line": 404,
+      "reference_text": "定义 1.36：子空间的和（sum of subspaces）\n\n设 $V_{1},\\dots,V_{m}$ 是 $V$ 的子空间。$V_{1},\\dots,V_{m}$ 的和记为 $V_{1}+\\cdots+V_{m}$，是 $V_{1},\\dots,V_{m}$ 中元素的一切可能之和的集合。更确切地，\n\n$$\nV_{1}+\\dots+V_{m}=\\{v_{1}+\\dots+v_{m}: v_{1}\\in V_{1},\\dots,v_{m}\\in V_{m}\\}.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1324",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1326",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1328",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1332",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1334",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1338",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.37：$\\mathbb{F}^{3}$ 中子空间之和",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:405-418"
+      ],
+      "reference_start_line": 405,
+      "reference_end_line": 418,
+      "reference_text": "例 1.37：$\\mathbb{F}^{3}$ 中子空间之和\n\n设 $U$ 是 $\\mathbb{F}^{3}$ 中第二、三坐标等于 0 的元素全体，$W$ 是第一、三坐标等于 0 的元素全体：\n\n$$\nU=\\{(x,0,0)\\in\\mathbb{F}^{3}: x\\in\\mathbb{F}\\}\\quad\\text{且}\\quad W=\\{(0,y,0)\\in\\mathbb{F}^{3}: y\\in\\mathbb{F}\\}.\n$$\n\n则\n\n$$\nU+W=\\{(x,y,0)\\in\\mathbb{F}^{3}: x,y\\in\\mathbb{F}\\}.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1340",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1342",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1344",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1348",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1350",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1352",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1356",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1358",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1362",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1364",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1368",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1370",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1374",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1376",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.38：$\\mathbb{F}^{4}$ 中子空间之和",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:419-434"
+      ],
+      "reference_start_line": 419,
+      "reference_end_line": 434,
+      "reference_text": "例 1.38：$\\mathbb{F}^{4}$ 中子空间之和\n\n设\n\n$$\nU=\\{(x,x,y,y)\\in\\mathbb{F}^{4}: x,y\\in\\mathbb{F}\\}\\quad\\text{且}\\quad W=\\{(x,x,x,y)\\in\\mathbb{F}^{4}: x,y\\in\\mathbb{F}\\}.\n$$\n\n用语言描述：$U$ 是 $\\mathbb{F}^{4}$ 中前两个坐标相等、后两个坐标也相等的元素全体；$W$ 是前三个坐标相等的元素全体。则\n\n$$\nU+W=\\{(x,x,y,z)\\in\\mathbb{F}^{4}: x,y,z\\in\\mathbb{F}\\},\n$$\n\n即：$U+W$ 是前两个坐标相等的元素全体。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1378",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1380",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1382",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1384",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1386",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1388",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1390",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1392",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1396",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "other",
+      "source_anchor": "结论 1.40：子空间之和是包含各加项的最小子空间",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:435-440"
+      ],
+      "reference_start_line": 435,
+      "reference_end_line": 440,
+      "reference_text": "结论 1.40：子空间之和是包含各加项的最小子空间\n\n设 $V_{1},\\dots,V_{m}$ 是 $V$ 的子空间，则 $V_{1}+\\cdots+V_{m}$ 是 $V$ 中包含 $V_{1},\\dots,V_{m}$ 的最小子空间（即每个包含所有加项的子空间都包含这个和）。\n\n#### Direct Sums（直和）",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1398",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1400",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1402",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "definition",
+      "source_anchor": "定义 1.41：直和（direct sum）与记号 $\\oplus$",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:441-444"
+      ],
+      "reference_start_line": 441,
+      "reference_end_line": 444,
+      "reference_text": "定义 1.41：直和（direct sum）与记号 $\\oplus$\n\n设 $V_{1},\\dots,V_{m}$ 是 $V$ 的子空间。和 $V_{1}+\\cdots+V_{m}$ 称为直和，若 $V_{1}+\\cdots+V_{m}$ 中每个元素都只能以一种方式写成和 $v_{1}+\\cdots+v_{m}$（其中每个 $v_{k}\\in V_{k}$）。若 $V_{1}+\\cdots+V_{m}$ 是直和，则记 $V_{1}\\oplus\\cdots\\oplus V_{m}$，$\\oplus$ 记号表示这是直和。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1405",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1407",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1409",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1413",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.42：两个子空间的直和",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:445-454"
+      ],
+      "reference_start_line": 445,
+      "reference_end_line": 454,
+      "reference_text": "例 1.42：两个子空间的直和\n\n设 $U$ 是 $\\mathbb{F}^{3}$ 中末坐标等于 0 的向量构成的子空间，$W$ 是前两个坐标等于 0 的向量构成的子空间：\n\n$$\nU=\\{(x,y,0)\\in\\mathbb{F}^{3}: x,y\\in\\mathbb{F}\\}\\quad\\text{且}\\quad W=\\{(0,0,z)\\in\\mathbb{F}^{3}: z\\in\\mathbb{F}\\}.\n$$\n\n则 $\\mathbb{F}^{3}=U\\oplus W$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1415",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1417",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1419",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1421",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1423",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1427",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1429",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "example",
+      "source_anchor": "例 1.43：多个子空间的直和",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:455-462"
+      ],
+      "reference_start_line": 455,
+      "reference_end_line": 462,
+      "reference_text": "例 1.43：多个子空间的直和\n\n设 $V_{k}$ 是 $\\mathbb{F}^{n}$ 中除第 $k$ 个位置外坐标全为 0 的向量构成的子空间；例如 $V_{2}=\\{(0,x,0,\\dots,0)\\in\\mathbb{F}^{n}: x\\in\\mathbb{F}\\}$。则\n\n$$\n\\mathbb{F}^{n}=V_{1}\\oplus\\dots\\oplus V_{n}.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1431",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1433",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1435",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1439",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1443",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1447",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1449",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1453",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1455",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1457",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1461",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1463",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1467",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1469",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1471",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "counterexample",
+      "source_anchor": "反例 1.44：不是直和的子空间之和",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:463-484"
+      ],
+      "reference_start_line": 463,
+      "reference_end_line": 484,
+      "reference_text": "反例 1.44：不是直和的子空间之和\n\n设\n\n$$\nV_{1}=\\{(x,y,0)\\in\\mathbb{F}^{3}: x,y\\in\\mathbb{F}\\},\\qquad V_{2}=\\{(0,0,z)\\in\\mathbb{F}^{3}: z\\in\\mathbb{F}\\},\\qquad V_{3}=\\{(0,y,y)\\in\\mathbb{F}^{3}: y\\in\\mathbb{F}\\}.\n$$\n\n则 $\\mathbb{F}^{3}=V_{1}+V_{2}+V_{3}$。但 $\\mathbb{F}^{3}$ 不等于 $V_{1},V_{2},V_{3}$ 的直和，因为 $(0,0,0)$ 可以以多种方式写成和 $v_{1}+v_{2}+v_{3}$（各 $v_{k}\\in V_{k}$）。具体地，\n\n$$\n(0,0,0)=(0,1,0)+(0,0,1)+(0,-1,-1)\n$$\n\n且当然\n\n$$\n(0,0,0)=(0,0,0)+(0,0,0)+(0,0,0),\n$$\n\n其中每个等式右边第一个向量在 $V_{1}$ 中、第二个在 $V_{2}$ 中、第三个在 $V_{3}$ 中。因此和 $V_{1}+V_{2}+V_{3}$ 不是直和。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1473",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1475",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1477",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1479",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1481",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1485",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1487",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1491",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1493",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1497",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1499",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1501",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "criterion",
+      "source_anchor": "判定 1.45：直和的充要条件",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:485-488"
+      ],
+      "reference_start_line": 485,
+      "reference_end_line": 488,
+      "reference_text": "判定 1.45：直和的充要条件\n\n设 $V_{1},\\dots,V_{m}$ 是 $V$ 的子空间，则 $V_{1}+\\cdots+V_{m}$ 是直和当且仅当把 0 写成和 $v_{1}+\\cdots+v_{m}$（每个 $v_{k}\\in V_{k}$）的唯一方式是每个 $v_{k}=0$。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1503",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1505",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1507",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1511",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1513",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1515",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1519",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "criterion",
+      "source_anchor": "判定 1.46：两个子空间的直和",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:489-496"
+      ],
+      "reference_start_line": 489,
+      "reference_end_line": 496,
+      "reference_text": "判定 1.46：两个子空间的直和\n\n设 $U$ 和 $W$ 是 $V$ 的子空间，则\n\n$$\nU+W\\ \\text{是直和}\\iff U\\cap W=\\{0\\}.\n$$",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1521",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：多于两个子空间的情形",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:497-500"
+      ],
+      "reference_start_line": 497,
+      "reference_end_line": 500,
+      "reference_text": "注：多于两个子空间的情形\n\n上述结论只处理两个子空间。询问多于两个子空间是否构成直和时，只检验每对子空间的交为 $\\{0\\}$ 是不够的（见例 1.44：其中 $V_{1}\\cap V_{2}=V_{1}\\cap V_{3}=V_{2}\\cap V_{3}=\\{0\\}$，但和不是直和）。",
+      "source_mapping_status": "human_review_required"
     },
     {
       "block_id": "K-1523",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1525",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1527",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1529",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1534",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1536",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1538",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1540",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1542",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1545",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1547",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1549",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1551",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1553",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1557",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1559",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1561",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1565",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1567",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1571",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1575",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1578",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1582",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1584",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1586",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1590",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1592",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1594",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1598",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1600",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1602",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1606",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1608",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1610",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1614",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1616",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1618",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1620",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1624",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1626",
-      "decision": null,
-      "review": "required"
-    },
-    {
-      "block_id": "K-1630",
-      "decision": null,
-      "review": "required"
+      "decision": "include",
+      "kind": "remark",
+      "source_anchor": "注：与并/不交并的类比",
+      "atomic_requirements": [],
+      "weight": 1,
+      "review": "user-accepted reference; independent source and atomic review required",
+      "review_evidence": [
+        "reference_knowledge.md:501-503"
+      ],
+      "reference_start_line": 501,
+      "reference_end_line": 503,
+      "reference_text": "注：与并/不交并的类比\n\n子空间的和类似于集合的并；子空间的直和类似于集合的不交并（disjoint union）。向量空间的两个子空间不可能不相交（都含 0），所以在两个子空间的情形，「不相交」被「交等于 $\\{0\\}$」取代。",
+      "source_mapping_status": "human_review_required"
     }
   ]
 }

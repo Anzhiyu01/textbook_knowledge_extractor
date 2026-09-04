@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from aggregate_pairs import aggregate_pairs
+from adapt_reference_gold import _blocks
 from experiments import freeze_manifest
 from import_results import import_result
 from package_builder import build_packages
@@ -278,6 +279,24 @@ class RepositoryLeakageTests(unittest.TestCase):
             {case["case_id"] for case in report["cases"]},
             {"ladr_ch1_v25", "rudin_ch2_v25", "probability_ch1_v25"},
         )
+
+    def test_reference_adapter_strips_internal_k_prefix_from_semantics(self) -> None:
+        blocks = _blocks("**K-505 定义：复数**\n\n内容。\n", "bold_k")
+        self.assertEqual(blocks[0]["block_id"], "K-505")
+        self.assertEqual(blocks[0]["source_anchor"], "定义：复数")
+        self.assertFalse(blocks[0]["reference_text"].startswith("K-"))
+
+    def test_reference_adapter_keeps_rudin_244(self) -> None:
+        blocks = _blocks("### 2.44 Cantor 集\n\n内容。\n", "rudin")
+        self.assertEqual(len(blocks), 1)
+        self.assertEqual(blocks[0]["block_id"], "K-244")
+
+    def test_public_contract_does_not_require_internal_gold_ids(self) -> None:
+        benchmark = Path(__file__).resolve().parents[1]
+        paths = [benchmark / "prompt.md"] + list(benchmark.glob("*/input/public_case.json"))
+        combined = "\n".join(path.read_text(encoding="utf-8-sig") for path in paths)
+        self.assertNotIn("K-*", combined)
+        self.assertNotIn("gold_id", combined)
 
 
 if __name__ == "__main__":

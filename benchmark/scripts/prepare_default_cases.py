@@ -80,7 +80,7 @@ def _candidate_items(lines: list[str]) -> list[dict[str, Any]]:
     return items
 
 
-def prepare_case(repo_root: Path, spec: dict[str, Any]) -> dict[str, Any]:
+def prepare_case(repo_root: Path, spec: dict[str, Any], *, overwrite_gold: bool = False) -> dict[str, Any]:
     source_path = repo_root / spec["source"]
     if not source_path.is_file():
         raise FileNotFoundError(source_path)
@@ -152,9 +152,11 @@ def prepare_case(repo_root: Path, spec: dict[str, Any]) -> dict[str, Any]:
         "candidate_count": len(items),
         "items": items,
     }
-    (gold_dir / "candidate_gold.json").write_text(
-        json.dumps(gold, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    gold_path = gold_dir / "candidate_gold.json"
+    if overwrite_gold or not gold_path.exists():
+        gold_path.write_text(
+            json.dumps(gold, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
     return {
         "case_id": spec["case_id"],
         "source": str(source_path),
@@ -168,8 +170,12 @@ def prepare_case(repo_root: Path, spec: dict[str, Any]) -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path(__file__).parents[2])
+    parser.add_argument("--overwrite-gold", action="store_true")
     args = parser.parse_args()
-    reports = [prepare_case(args.repo_root.resolve(), spec) for spec in CASE_SPECS]
+    reports = [
+        prepare_case(args.repo_root.resolve(), spec, overwrite_gold=args.overwrite_gold)
+        for spec in CASE_SPECS
+    ]
     print(json.dumps(reports, ensure_ascii=False, indent=2))
     return 0
 

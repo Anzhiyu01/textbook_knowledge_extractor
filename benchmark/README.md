@@ -56,6 +56,14 @@ python -X utf8 scripts/check_default_cases.py
 
 该脚本只生成公开切片和 `human_review_required` 候选 gold；候选边界、纳入/排除、原子要求、权重和来源证据仍需两名复核者确认。
 
+将 `scratch/ladr_ch1_list.md`、`scratch/Rudin_ch2_list.md` 和 `scratch/probability_ch1_list.md` 适配为 gold 参考清单：
+
+```powershell
+python -X utf8 scripts/adapt_reference_gold.py
+```
+
+适配结果保存在各题目的 `gold/reference_knowledge.md` 和 `gold/candidate_gold.json`。其中 `K-*` 只作为后端关联参考块的内部主键，不进入模型可见 package，也不作为奖励、惩罚或字符串命中依据。模型提交中的 `B-*` 也只是连接成品与审计映射的中性标识。适配器记录用户已认可参考清单，但不会自动宣称独立来源复核完成。
+
 题源可以来自 `scratch`，但 `scratch` 永远不是模型工作区。构建时只把已经冻结的公开切片复制到匿名 package；gold、完整题源、case manifest、arm 映射和控制字段留在实验目录的 `control/` 或评测者目录。模型运行时必须以单个 package 目录作为唯一工作区，不能以仓库根目录启动，也不能把仓库根目录挂载给 harness。若 harness 或插件允许模型读取 package 的父目录、网络或任意本地路径，该 trial 必须标记为 `invalid`，不能靠 prompt 约束代替文件系统隔离。
 
 因此，防止被测模型提前阅读答案需要同时满足三层条件：
